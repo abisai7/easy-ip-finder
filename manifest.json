@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Easy IP Finder",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "src/popup/index.html"
+    },
+    "permissions": [
+        "storage",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "src/background/background.js",
+        "type": "module"
+    }
+}
