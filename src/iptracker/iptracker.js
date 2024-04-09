@@ -1,89 +1,52 @@
-export const iptracker = {
-  url: "https://api.ipify.org/?format=json",
-  errorMessage:
-    "An error has occurred, sorry for the inconvenience. Please try again. Reference: ",
-  currentIp: null,
-
-  fetchIP: async () => {
-    const response = await fetch(iptracker.url);
-    if (!response.ok) {
-      throw new Error("Failed to fetch IP");
-    }
-    const data = await response.json();
-    if (!data.ip) {
-      throw new Error("Invalid response data");
-    }
-    return data.ip;
+export const ipTracker = {
+  getVersionUrl: (version) => {
+    const baseUrl = "https://api.ipify.org?format=json";
+    const ipv6Url = "https://api64.ipify.org?format=json";
+    return version === 6 ? ipv6Url : baseUrl;
   },
 
-  renderError: (error) => {
-    const errorElement = document.querySelector(".error");
-    errorElement.innerHTML = `${iptracker.errorMessage} ${error}`;
-    errorElement.classList.remove("hide");
-  },
-
-  renderIP: (ip) => {
-    const ipElement = document.querySelector("x-ip");
-    ipElement.innerText = ip;
-    ipElement.classList.remove("hide");
-    ipElement.classList.add("show");
-  },
-
-  hideLoading: () => {
-    const loaderElement = document.querySelector(".lds-loading");
-    loaderElement.classList.remove("show");
-    loaderElement.classList.add("hide");
-  },
-
-  showLoading: () => {
-    const loaderElement = document.querySelector(".lds-loading");
-    loaderElement.classList.remove("hide");
-    loaderElement.classList.add("show");
-  },
-
-  copyToClipboard: async (value) => {
-    await navigator.clipboard.writeText(value).then(() => {
-      let options = {
-        type: "basic",
-        title: "Easy Public IP",
-        message: `IP ${value} copied to the clipboard`,
-        iconUrl: "/icon-128.png",
-        silent: true,
-      };
-      chrome.notifications.create(options);
-    });
-  },
-
-  copyIpToClipboardOnLoad: async () => {
-    const config = await chrome.storage.sync.get(["copyToClipboardOnLoad"]);
-    return config.copyToClipboardOnLoad;
-  },
-
-  init: async () => {
-    iptracker.showLoading();
+  fetchIP: async (url) => {
     try {
-      const config = await chrome.storage.sync.get(["copyToClipboardOnLoad"]);
-      document.querySelector("#clipboard-config-check").checked =
-        config.copyToClipboardOnLoad;
-
-      iptracker.currentIp = await iptracker.fetchIP();
-      iptracker.renderIP(iptracker.currentIp);
-
-      console.log(config.copyIpToClipboardOnLoad);
-      if (config.copyToClipboardOnLoad) {
-        await iptracker.copyToClipboard(iptracker.currentIp);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Failed to fetch IP");
       }
-
-      document
-        .querySelector(".copy-to-clipboard-btn")
-        .addEventListener("click", () =>
-          iptracker.copyToClipboard(iptracker.currentIp)
-        );
+      const data = await response.json();
+      if (!data.ip) {
+        throw new Error("Invalid response data");
+      }
+      return data.ip;
     } catch (error) {
-      console.error("Error:", error);
-      iptracker.renderError(error.message);
-    } finally {
-      iptracker.hideLoading();
+      throw new Error(`Error fetching IP: ${error.message}`);
+    }
+  },
+
+  copyToClipboard: async (ip, onCopy) => {
+    if (ip) {
+      try {
+        await navigator.clipboard.writeText(ip);
+        if (onCopy) {
+          onCopy();
+        }
+      } catch (error) {
+        console.error("Error copying IP to clipboard:", error);
+      }
+    }
+  },
+
+  init: async (versionToGet = 4, copyToClipboard = false, onCopy = null) => {
+    try {
+      const url = ipTracker.getVersionUrl(versionToGet);
+      const currentIp = await ipTracker.fetchIP(url);
+      if (copyToClipboard) {
+        await ipTracker.copyToClipboard(currentIp, onCopy);
+      }
+      return { ip: currentIp, error: "" };
+    } catch (error) {
+      console.error("Initialization error:", error);
+      return { ip: null, error: error.message };
     }
   },
 };
+
+
