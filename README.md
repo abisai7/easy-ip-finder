@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img alt="Easy IP Finder Logo" src="https://github.com/abisai7/easy-ip-finder/assets/34797580/a1096c66-eaaa-4a29-99d7-b2d056d9b49b)"> 
+</p>
+
 # EASY IP FINDER
 
 This Chrome extension provides a quick and easy way to display your public IP address directly from the browser's toolbar. It's ideal for users who frequently need to check their IP address without having to visit third-party websites.
