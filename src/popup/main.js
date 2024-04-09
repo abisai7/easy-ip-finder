@@ -108,7 +108,7 @@ const showNotification = () => {
     type: "basic",
     title: "Easy IP Finder",
     message: `IP copied to the clipboard`,
-    iconUrl: "/icon-128.png",
+    iconUrl: "/icon128.png",
     silent: true,
   };
   chrome.notifications.create(options);
