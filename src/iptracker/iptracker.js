@@ -21,7 +21,7 @@ export const ipTracker = {
     }
   },
 
-  copyToClipboard: async (ip, onCopy) => {
+  copyToClipboard: async (ip, onCopy = null) => {
     if (ip) {
       try {
         await navigator.clipboard.writeText(ip);

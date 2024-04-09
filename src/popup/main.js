@@ -1,6 +1,7 @@
 import './style.css'
 import { ipTracker } from '../iptracker/iptracker'
 
+let currentIP = null
 const primaryLogo =
   '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="none" d="M12 2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm-2 3H8v6h1V9.014h1c.298-.013 2 0 2-2.018 0-1.74-1.314-1.952-1.825-1.987zM6 5H5v6h1zm4 .984c.667 0 1 .336 1 1.008C11 7.664 10.667 8 10 8H9V5.984z"/></svg>'
 const copyLogo =
@@ -60,13 +61,18 @@ const renderIP = async () => {
   document.querySelector('#clipboard-config-check').checked =
     config.copyToClipboardOnLoad
 
-  const ipResult = await ipTracker.init(4, config.copyToClipboardOnLoad, showNotification)
+  const ipResult = await ipTracker.init(
+    4,
+    config.copyToClipboardOnLoad,
+    showNotification
+  )
 
   if (ipResult.ip == null) {
     hideLoading()
     return renderError(`${genericErrorMessage} ${ipResult.error}`)
   }
 
+  currentIP = ipResult.ip
   showIp(ipResult.ip)
   hideLoading()
   showCopyToClipboardAction()
@@ -105,13 +111,16 @@ const showIp = (ip) => {
 
 const showNotification = () => {
   let options = {
-    type: "basic",
-    title: "Easy IP Finder",
+    type: 'basic',
+    title: 'Easy IP Finder',
     message: `IP copied to the clipboard`,
-    iconUrl: "/icon128.png",
+    iconUrl: '/icon128.png',
     silent: true,
-  };
-  chrome.notifications.create(options);
+  }
+  chrome.notifications.create(options)
 }
 
+document
+  .querySelector('.copy-to-clipboard-btn')
+  .addEventListener('click', () => ipTracker.copyToClipboard(currentIP, showNotification))
 document.addEventListener('DOMContentLoaded', renderIP)
