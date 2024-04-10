@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "Easy IP Finder",
+    "description": "Extension Name"
+  },
+  "extShortName": {
+    "message": "EasyIPFinder",
+    "description": "Extension Short Name"
+  },
+  "extDescription": {
+    "message": "This Chrome extension provides a quick and easy way to display your public IP address directly from the browser's toolbar. It's ideal for users who frequently need to check their IP address without having to visit third-party websites.",
+    "description": "Extension Description"
+  },
+  "copyToClipboardAction": {
+    "message": "Copy IP to Clipboard",
+    "description": "Copy to clipboard action label"
+  },
+  "copyConfigText": {
+    "message": "Copy IP to clipboard when opening the popup",
+    "description": "Copy automatically config label"
+  },
+  "ipCopiedText": {
+    "message": "IP copied to clipboard",
+    "description": "Notification text"
+  },
+  "genericErrorMessage": {
+    "message": "An error has occurred, sorry for the inconvenience. Please try again. Reference: ",
+    "description": "Generic error text"
+  }
+}

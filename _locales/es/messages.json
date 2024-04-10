@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "Easy IP Finder",
+    "description": "Nombre de la Extensión"
+  },
+  "extShortName": {
+    "message": "EasyIPFinder",
+    "description": "Nombre Corto de la Extensión"
+  },
+  "extDescription": {
+    "message": "Esta extensión para Chrome proporciona una manera rápida y fácil de mostrar tu dirección IP pública directamente desde la barra de herramientas del navegador. Es ideal para usuarios que necesitan verificar frecuentemente su dirección IP sin tener que visitar sitios web de terceros.",
+    "description": "Descripción de la Extensión"
+  },
+  "copyToClipboardAction": {
+    "message": "Copiar IP al Portapapeles",
+    "description": "Etiqueta de acción para copiar al portapapeles"
+  },
+  "copyConfigText": {
+    "message": "Copiar IP al portapapeles al abrir el popup",
+    "description": "Etiqueta de configuración para copiar automáticamente"
+  },
+  "ipCopiedText": {
+    "message": "IP Copiada al portapapeles",
+    "description": "Texto para notificación de confirmación de IP copiada al portapapeles"
+  },
+  "genericErrorMessage": {
+    "message": "Ha ocurrido un error, lamentamos la inconveniencia. Por favor, inténtalo de nuevo. Referencia: ",
+    "description": "Texto genérico de error"
+  }
+}

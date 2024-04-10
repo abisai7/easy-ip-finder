@@ -6,11 +6,10 @@ const primaryLogo =
   '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="none" d="M12 2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm-2 3H8v6h1V9.014h1c.298-.013 2 0 2-2.018 0-1.74-1.314-1.952-1.825-1.987zM6 5H5v6h1zm4 .984c.667 0 1 .336 1 1.008C11 7.664 10.667 8 10 8H9V5.984z"/></svg>'
 const copyLogo =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="currentColor" d="M22.6 4h-1.05a3.89 3.89 0 00-7.31 0h-.84A2.41 2.41 0 0011 6.4V10h14V6.4A2.41 2.41 0 0022.6 4m.4 4H13V6.25a.25.25 0 01.25-.25h2.69l.12-1.11a1.24 1.24 0 01.55-.89 2 2 0 013.15 1.18l.09.84h2.9a.25.25 0 01.25.25z" class="prefix__clr-i-outline prefix__clr-i-outline-path-1"/><path fill="currentColor" d="M33.25 18.06H21.33l2.84-2.83a1 1 0 10-1.42-1.42l-5.25 5.25 5.25 5.25a1 1 0 00.71.29 1 1 0 00.71-1.7l-2.84-2.84h11.92a1 1 0 000-2" class="prefix__clr-i-outline prefix__clr-i-outline-path-2"/><path fill="currentColor" d="M29 16h2V6.68A1.66 1.66 0 0029.35 5h-2.27v2H29z" class="prefix__clr-i-outline prefix__clr-i-outline-path-3"/><path fill="currentColor" d="M29 31H7V7h2V5H6.64A1.66 1.66 0 005 6.67v24.65A1.66 1.66 0 006.65 33h22.71A1.66 1.66 0 0031 31.33v-9.27h-2z" class="prefix__clr-i-outline prefix__clr-i-outline-path-4"/><path fill="none" d="M0 0h36v36H0z"/></svg>'
-const title = 'EASY IP FINDER'
-const copyToClipboardAction = 'Copy IP to Clipboard'
-const copyConfigText = 'Copy IP to clipboard when opening the popup'
-const genericErrorMessage =
-  'An error has occurred, sorry for the inconvenience. Please try again. Reference: '
+const title = chrome.i18n.getMessage('extName')
+const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
+const copyConfigText = chrome.i18n.getMessage('copyConfigText')
+const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
 const template = /*html*/ `
 
 <section class="top-section">
@@ -112,8 +111,8 @@ const showIp = (ip) => {
 const showNotification = () => {
   let options = {
     type: 'basic',
-    title: 'Easy IP Finder',
-    message: `IP copied to the clipboard`,
+    title: chrome.i18n.getMessage('extName'),
+    message: chrome.i18n.getMessage('ipCopiedText'),
     iconUrl: '/icon128.png',
     silent: true,
   }
@@ -122,5 +121,7 @@ const showNotification = () => {
 
 document
   .querySelector('.copy-to-clipboard-btn')
-  .addEventListener('click', () => ipTracker.copyToClipboard(currentIP, showNotification))
+  .addEventListener('click', () =>
+    ipTracker.copyToClipboard(currentIP, showNotification)
+  )
 document.addEventListener('DOMContentLoaded', renderIP)
