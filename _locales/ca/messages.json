@@ -1,0 +1,30 @@
+{
+    "extName": {
+        "message": "Cercador d'IP Fàcil",
+        "description": "Nom de l'Extensió"
+    },
+    "extShortName": {
+        "message": "CercadorIPFàcil",
+        "description": "Nom Curt de l'Extensió"
+    },
+    "extDescription": {
+        "message": "Aquesta extensió per a Chrome proporciona una manera ràpida i fàcil de mostrar la teva adreça IP pública directament des de la barra d'eines del navegador. És ideal per als usuaris que necessiten comprovar sovint la seva adreça IP sense haver de visitar llocs web de tercers.",
+        "description": "Descripció de l'Extensió"
+    },
+    "copyToClipboardAction": {
+        "message": "Copiar IP al Porta-retalls",
+        "description": "Etiqueta de l'Acció de Copiar al Porta-retalls"
+    },
+    "copyConfigText": {
+        "message": "Copiar IP al porta-retalls en obrir la finestra emergent",
+        "description": "Etiqueta de configuració per copiar automàticament"
+    },
+    "ipCopiedText": {
+        "message": "IP copiada al porta-retalls",
+        "description": "Text de Notificació"
+    },
+    "genericErrorMessage": {
+        "message": "S'ha produït un error, lamentem les molèsties. Si us plau, torna-ho a intentar. Referència: ",
+        "description": "Text Genèric d'Error"
+    }
+}

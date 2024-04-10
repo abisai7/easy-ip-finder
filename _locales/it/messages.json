@@ -1,0 +1,30 @@
+{
+    "extName": {
+        "message": "Ricerca IP Facile",
+        "description": "Nome dell'Estensione"
+    },
+    "extShortName": {
+        "message": "RicercaIPFacile",
+        "description": "Nome Breve dell'Estensione"
+    },
+    "extDescription": {
+        "message": "Questa estensione per Chrome fornisce un modo rapido e facile per visualizzare il proprio indirizzo IP pubblico direttamente dalla barra degli strumenti del browser. È ideale per gli utenti che devono controllare frequentemente il proprio indirizzo IP senza dover visitare siti web di terze parti.",
+        "description": "Descrizione dell'Estensione"
+    },
+    "copyToClipboardAction": {
+        "message": "Copia IP negli Appunti",
+        "description": "Etichetta Azione Copia negli Appunti"
+    },
+    "copyConfigText": {
+        "message": "Copia IP negli appunti all'apertura del popup",
+        "description": "Etichetta configurazione copia automatica"
+    },
+    "ipCopiedText": {
+        "message": "IP copiato negli appunti",
+        "description": "Testo Notifica"
+    },
+    "genericErrorMessage": {
+        "message": "Si è verificato un errore, ci scusiamo per l'inconveniente. Si prega di riprovare. Riferimento: ",
+        "description": "Testo Errore Generico"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "extName": {
+      "message": "Einfacher IP-Finder",
+      "description": "Erweiterungsname"
+    },
+    "extShortName": {
+      "message": "EinfacherIPFinder",
+      "description": "Kurzname der Erweiterung"
+    },
+    "extDescription": {
+      "message": "Diese Chrome-Erweiterung bietet eine schnelle und einfache Möglichkeit, Ihre öffentliche IP-Adresse direkt aus der Symbolleiste des Browsers anzuzeigen. Sie ist ideal für Benutzer, die häufig ihre IP-Adresse überprüfen müssen, ohne Drittanbieter-Websites besuchen zu müssen.",
+      "description": "Erweiterungsbeschreibung"
+    },
+    "copyToClipboardAction": {
+      "message": "IP in Zwischenablage kopieren",
+      "description": "Aktion zum Kopieren in die Zwischenablage Beschriftung"
+    },
+    "copyConfigText": {
+      "message": "IP beim Öffnen des Popups automatisch in die Zwischenablage kopieren",
+      "description": "Beschriftung der automatischen Kopierkonfiguration"
+    },
+    "ipCopiedText": {
+      "message": "IP in die Zwischenablage kopiert",
+      "description": "Benachrichtigungstext"
+    },
+    "genericErrorMessage": {
+      "message": "Es ist ein Fehler aufgetreten, entschuldigen Sie die Unannehmlichkeiten. Bitte versuchen Sie es erneut. Referenz: ",
+      "description": "Generischer Fehler Text"
+    }
+  }
+  

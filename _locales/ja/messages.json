@@ -1,0 +1,30 @@
+{
+    "extName": {
+        "message": "簡単な IP ファインダー",
+        "description": "拡張機能名"
+    },
+    "extShortName": {
+        "message": "簡単IPファインダー",
+        "description": "拡張機能の短い名前"
+    },
+    "extDescription": {
+        "message": "この Chrome 拡張機能は、ブラウザのツールバーから直接公開されている IP アドレスを素早く簡単に表示する方法を提供します。第三者のウェブサイトにアクセスせずに、IP アドレスを頻繁にチェックするユーザーに最適です。",
+        "description": "拡張機能の説明"
+    },
+    "copyToClipboardAction": {
+        "message": "IP をクリップボードにコピー",
+        "description": "クリップボードにコピーするアクションラベル"
+    },
+    "copyConfigText": {
+        "message": "ポップアップを開く際に IP を自動的にクリップボードにコピー",
+        "description": "自動コピー構成ラベル"
+    },
+    "ipCopiedText": {
+        "message": "IP がクリップボードにコピーされました",
+        "description": "通知テキスト"
+    },
+    "genericErrorMessage": {
+        "message": "エラーが発生しました。ご迷惑をおかけして申し訳ありません。もう一度お試しください。参照：",
+        "description": "汎用エラーテキスト"
+    }
+}

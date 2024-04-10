@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "Chercheur IP Facile",
+    "description": "Nom de l'Extension"
+  },
+  "extShortName": {
+    "message": "ChercheurIPFacile",
+    "description": "Nom Court de l'Extension"
+  },
+  "extDescription": {
+    "message": "Cette extension Chrome fournit un moyen rapide et facile d'afficher votre adresse IP publique directement depuis la barre d'outils du navigateur. Elle est idéale pour les utilisateurs qui ont fréquemment besoin de vérifier leur adresse IP sans avoir à visiter des sites web tiers.",
+    "description": "Description de l'Extension"
+  },
+  "copyToClipboardAction": {
+    "message": "Copier l'IP dans le Presse-papiers",
+    "description": "Étiquette de l'action de copie dans le presse-papiers"
+  },
+  "copyConfigText": {
+    "message": "Copier l'IP dans le presse-papiers lors de l'ouverture de la fenêtre contextuelle",
+    "description": "Étiquette de configuration pour copier automatiquement"
+  },
+  "ipCopiedText": {
+    "message": "IP copiée dans le presse-papiers",
+    "description": "Texte de notification"
+  },
+  "genericErrorMessage": {
+    "message": "Une erreur s'est produite, désolé pour le désagrément. Veuillez réessayer. Référence : ",
+    "description": "Texte générique d'erreur"
+  }
+}
