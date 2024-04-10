@@ -26,5 +26,9 @@
   "genericErrorMessage": {
     "message": "An error has occurred, sorry for the inconvenience. Please try again. Reference: ",
     "description": "Generic error text"
+  },
+  "changeVersionToShowText": {
+      "message": "Change to IPv{v}",
+      "description": "Change version text button"
   }
 }

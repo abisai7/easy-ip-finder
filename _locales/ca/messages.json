@@ -26,5 +26,9 @@
     "genericErrorMessage": {
         "message": "S'ha produït un error, lamentem les molèsties. Si us plau, torna-ho a intentar. Referència: ",
         "description": "Text Genèric d'Error"
+    },
+    "changeVersionToShowText": {
+        "message": "Canviar a IPv{v}",
+        "description": "Text del botó de canvi de versió"
     }
 }

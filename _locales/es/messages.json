@@ -26,5 +26,9 @@
   "genericErrorMessage": {
     "message": "Ha ocurrido un error, lamentamos la inconveniencia. Por favor, inténtalo de nuevo. Referencia: ",
     "description": "Texto genérico de error"
+  },
+  "changeVersionToShowText": {
+    "message": "Cambiar a IPv{v}",
+    "description": "Texto del botón de cambio de versión"
   }
 }

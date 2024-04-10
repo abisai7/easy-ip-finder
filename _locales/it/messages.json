@@ -26,5 +26,9 @@
     "genericErrorMessage": {
         "message": "Si è verificato un errore, ci scusiamo per l'inconveniente. Si prega di riprovare. Riferimento: ",
         "description": "Testo Errore Generico"
+    },
+    "changeVersionToShowText": {
+        "message": "Passa a IPv{v}",
+        "description": "Testo del pulsante di cambio versione"
     }
 }

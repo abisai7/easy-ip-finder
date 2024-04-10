@@ -26,6 +26,10 @@
     "genericErrorMessage": {
       "message": "Es ist ein Fehler aufgetreten, entschuldigen Sie die Unannehmlichkeiten. Bitte versuchen Sie es erneut. Referenz: ",
       "description": "Generischer Fehler Text"
+    },
+    "changeVersionToShowText": {
+        "message": "Canviar a IPv{v}",
+        "description": "Text del botó de canvi de versió"
     }
   }
   

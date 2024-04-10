@@ -26,5 +26,9 @@
     "genericErrorMessage": {
         "message": "Произошла ошибка, извините за неудобства. Пожалуйста, попробуйте снова. Ссылка: ",
         "description": "Общий текст ошибки"
+    },
+    "changeVersionToShowText": {
+        "message": "Переключить на IPv{v}",
+        "description": "Текст кнопки переключения версии"
     }
 }

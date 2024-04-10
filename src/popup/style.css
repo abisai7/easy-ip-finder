@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  min-width: 300px;
+  min-width: 400px;
   background-color: var(--raisin-black);
   color: var(--mustard);
   font-family: system-ui, sans-serif;
@@ -22,12 +22,20 @@ body {
   display: none !important;
 }
 
+
 .top-section {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
+}
+
+.top-section .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
 }
 
 .top-section svg path {
@@ -40,6 +48,8 @@ body {
   align-items: center;
   border-radius: 10px;
   padding: 5px;
+  gap: 10px;
+  margin: 0 20px;
 }
 
 .ip-container h1 {
@@ -53,7 +63,7 @@ body {
   padding: 20px;
 }
 
-.copy-to-clipboard-btn {
+.copy-to-clipboard-btn, .change-version-btn {
   display: flex;
   gap: 10px;
   justify-content: center;
