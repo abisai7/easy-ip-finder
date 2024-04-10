@@ -1,13 +1,13 @@
-import './style.css';
-import { ipTracker } from '../iptracker/iptracker';
+import './style.css'
+import { ipTracker } from '../iptracker/iptracker'
 
-let currentIP = null;
-let currentVersion = 4;
+let currentIP = null
+let currentVersion = 4
 
 const primaryLogo = `
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
   <path fill="none" d="M12 2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm-2 3H8v6h1V9.014h1c.298-.013 2 0 2-2.018 0-1.74-1.314-1.952-1.825-1.987zM6 5H5v6h1zm4 .984c.667 0 1 .336 1 1.008C11 7.664 10.667 8 10 8H9V5.984z"/>
-</svg>`;
+</svg>`
 
 const copyLogo = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
@@ -16,16 +16,17 @@ const copyLogo = `
   <path fill="currentColor" d="M29 16h2V6.68A1.66 1.66 0 0029.35 5h-2.27v2H29z"/>
   <path fill="currentColor" d="M29 31H7V7h2V5H6.64A1.66 1.66 0 005 6.67v24.65A1.66 1.66 0 006.65 33h22.71A1.66 1.66 0 0031 31.33v-9.27h-2z"/>
   <path fill="none" d="M0 0h36v36H0z"/>
-</svg>`;
+</svg>`
 
-const title = chrome.i18n.getMessage('extName');
-const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction');
-const copyConfigText = chrome.i18n.getMessage('copyConfigText');
-const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage');
-const changeVersionToShowText = chrome.i18n.getMessage('changeVersionToShowText')
-  .replace('{v}', currentVersion === 4 ? 6 : 4);
+const title = chrome.i18n.getMessage('extName')
+const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
+const copyConfigText = chrome.i18n.getMessage('copyConfigText')
+const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
+const changeVersionToShowText = chrome.i18n
+  .getMessage('changeVersionToShowText')
+  .replace('{v}', currentVersion === 4 ? 6 : 4)
 
-const template = /* html */`
+const template = /* html */ `
 <section class="top-section">
   <div class="logo">   
     ${primaryLogo}
@@ -60,75 +61,82 @@ const template = /* html */`
     <label for="clipboard-config-check" class="toggle-button"><span>${copyConfigText}</span></label>
   </div>
 </section>
-`;
+`
 
-document.querySelector('#app').innerHTML = template;
+document.querySelector('#app').innerHTML = template
 
 function setCopyToClipboard(checked) {
-  chrome.storage.sync.set({ copyToClipboardOnLoad: checked });
+  chrome.storage.sync.set({ copyToClipboardOnLoad: checked })
 }
 
-document.querySelector('#clipboard-config-check').addEventListener('change', async (event) => {
-  setCopyToClipboard(event.target.checked);
-});
+document
+  .querySelector('#clipboard-config-check')
+  .addEventListener('change', async (event) => {
+    setCopyToClipboard(event.target.checked)
+  })
 
 const renderIP = async (version = 4) => {
-  loader(true);
-  const config = await chrome.storage.sync.get(['copyToClipboardOnLoad']);
-  document.querySelector('#clipboard-config-check').checked = config.copyToClipboardOnLoad;
+  loader(true)
+  const config = await chrome.storage.sync.get(['copyToClipboardOnLoad'])
+  document.querySelector('#clipboard-config-check').checked =
+    config.copyToClipboardOnLoad
 
-  const ipResult = await ipTracker.init(version, config.copyToClipboardOnLoad, showNotification);
+  const ipResult = await ipTracker.init(
+    version,
+    config.copyToClipboardOnLoad,
+    showNotification
+  )
 
   if (ipResult.ip == null) {
-    loader(false);
-    return renderError(`${genericErrorMessage} ${ipResult.error}`);
+    loader(false)
+    return renderError(`${genericErrorMessage} ${ipResult.error}`)
   }
 
-  currentIP = ipResult.ip;
-  currentVersion = version;
-  showIp(ipResult.ip);
+  currentIP = ipResult.ip
+  currentVersion = version
+  showIp(ipResult.ip)
   document.querySelector('.change-version-btn-text').innerText = chrome.i18n
     .getMessage('changeVersionToShowText')
-    .replace('{v}', currentVersion === 4 ? 6 : 4);
-  loader(false);
-  showCopyToClipboardAction();
-};
+    .replace('{v}', currentVersion === 4 ? 6 : 4)
+  loader(false)
+  showCopyToClipboardAction()
+}
 
 const showCopyToClipboardAction = () => {
-  const copyToClipboardButton = document.querySelector('.copy-to-clipboard-btn');
-  copyToClipboardButton.classList.remove('hide');
-  copyToClipboardButton.classList.add('show');
-};
+  const copyToClipboardButton = document.querySelector('.copy-to-clipboard-btn')
+  copyToClipboardButton.classList.remove('hide')
+  copyToClipboardButton.classList.add('show')
+}
 
 const loader = (show = true) => {
-  const loaderElement = document.querySelector('.lds-loading');
+  const loaderElement = document.querySelector('.lds-loading')
   if (show) {
-    loaderElement.classList.remove('hide');
-    loaderElement.classList.add('show');
+    loaderElement.classList.remove('hide')
+    loaderElement.classList.add('show')
   } else {
-    loaderElement.classList.remove('show');
-    loaderElement.classList.add('hide');
+    loaderElement.classList.remove('show')
+    loaderElement.classList.add('hide')
   }
-};
+}
 
 const renderError = (errorMessage) => {
-  const errorElement = document.querySelector('.error');
-  errorElement.innerHTML = `${errorMessage}`;
-  errorElement.classList.remove('hide');
-};
+  const errorElement = document.querySelector('.error')
+  errorElement.innerHTML = `${errorMessage}`
+  errorElement.classList.remove('hide')
+}
 
 const showIp = (ip) => {
-  const ipElement = document.querySelector('x-ip');
-  ipElement.innerText = ip;
-  ipElement.classList.remove('hide');
-  ipElement.classList.add('show');
-};
+  const ipElement = document.querySelector('x-ip')
+  ipElement.innerText = ip
+  ipElement.classList.remove('hide')
+  ipElement.classList.add('show')
+}
 
 const hideIp = () => {
-  const ipElement = document.querySelector('x-ip');
-  ipElement.classList.remove('show');
-  ipElement.classList.add('hide');
-};
+  const ipElement = document.querySelector('x-ip')
+  ipElement.classList.remove('show')
+  ipElement.classList.add('hide')
+}
 
 const showNotification = () => {
   const options = {
@@ -137,19 +145,21 @@ const showNotification = () => {
     message: chrome.i18n.getMessage('ipCopiedText'),
     iconUrl: '/icon128.png',
     silent: true,
-  };
-  chrome.notifications.create(options);
-};
+  }
+  chrome.notifications.create(options)
+}
 
 document.querySelector('.change-version-btn').addEventListener('click', () => {
-  hideIp();
-  renderIP(currentVersion === 4 ? 6 : 4);
-});
+  hideIp()
+  renderIP(currentVersion === 4 ? 6 : 4)
+})
 
-document.querySelector('.copy-to-clipboard-btn').addEventListener('click', () => {
-  ipTracker.copyToClipboard(currentIP, showNotification);
-});
+document
+  .querySelector('.copy-to-clipboard-btn')
+  .addEventListener('click', () => {
+    ipTracker.copyToClipboard(currentIP, showNotification)
+  })
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderIP();
-});
+  renderIP()
+})
