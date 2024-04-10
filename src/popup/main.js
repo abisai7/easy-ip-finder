@@ -25,8 +25,6 @@ const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage');
 const changeVersionToShowText = chrome.i18n.getMessage('changeVersionToShowText')
   .replace('{v}', currentVersion === 4 ? 6 : 4);
 
-console.log(changeVersionToShowText);
-
 const template = /* html */`
 <section class="top-section">
   <div class="logo">   
