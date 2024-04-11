@@ -8,7 +8,7 @@
     "description": "Extension Short Name"
   },
   "extDescription": {
-    "message": "This Chrome extension provides a quick and easy way to display your public IP address directly from the browser's toolbar. It's ideal for users who frequently need to check their IP address without having to visit third-party websites.",
+    "message": "This Chrome extension quickly shows your public IP in the browser toolbar, ideal for users often checking their IP.",
     "description": "Extension Description"
   },
   "copyToClipboardAction": {
