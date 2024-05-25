@@ -1,6 +1,10 @@
 // Set default config
 chrome.runtime.onInstalled.addListener(async () => {
-  chrome.storage.sync.set({
-    copyToClipboardOnLoad: true,
-  })
+  const config = await chrome.storage.sync.get(['copyToClipboardOnLoad'])
+
+  if (config.copyToClipboardOnLoad === undefined) {
+    chrome.storage.sync.set({
+      copyToClipboardOnLoad: true,
+    })
+  }
 })
