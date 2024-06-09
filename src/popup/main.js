@@ -27,9 +27,6 @@ const changeVersionToShowText = chrome.i18n
   .replace('{v}', currentVersion === 4 ? 6 : 4)
 const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
 const authorMessage = chrome.i18n.getMessage('authorMessage')
-
-console.log(authorMessage)
-
 const template = /* html */ `
 <section class="top-section">
   <div class="logo">   
