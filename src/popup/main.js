@@ -25,6 +25,10 @@ const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
 const changeVersionToShowText = chrome.i18n
   .getMessage('changeVersionToShowText')
   .replace('{v}', currentVersion === 4 ? 6 : 4)
+const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
+const authorMessage = chrome.i18n.getMessage('authorMessage')
+
+console.log(authorMessage)
 
 const template = /* html */ `
 <section class="top-section">
@@ -60,6 +64,10 @@ const template = /* html */ `
     <input class="toggle-input" type="checkbox" id="clipboard-config-check" />
     <label for="clipboard-config-check" class="toggle-button"><span>${copyConfigText}</span></label>
   </div>
+</section>
+<section class="author-section">
+  <p>${rateUsMessage}</p>
+  <p>${authorMessage}</p>
 </section>
 `
 

@@ -30,5 +30,13 @@
     "changeVersionToShowText": {
         "message": "IPv{v}に切り替える",
         "description": "バージョン切り替えボタンのテキスト"
+    },
+    "rateUsMessage": {
+        "message": "拡張機能を楽しんでいますか？ 🌟 <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>評価してください！</a> フィードバックは改善の参考になります。ありがとうございます！",
+        "description": "評価のメッセージ"
+    },
+    "authorMessage": {
+        "message": "<a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹 によって提供されています",
+        "description": "作者メッセージ"
     }
 }

@@ -4,13 +4,16 @@
   --moonstone: #009fb7ff;
   --dim-gray: #696773ff;
   --antiflash-white: #eff1f3ff;
+
+
+  --primary-color: var(--mustard);
 }
 
 body {
   margin: 0;
   min-width: 400px;
   background-color: var(--raisin-black);
-  color: var(--mustard);
+  color: var(--primary-color);
   font-family: system-ui, sans-serif;
 }
 
@@ -39,7 +42,7 @@ body {
 }
 
 .top-section svg path {
-  fill: var(--mustard);
+  fill: var(--primary-color);
 }
 
 .ip-container {
@@ -72,7 +75,7 @@ body {
   cursor: pointer;
   border-width: 0;
   border-radius: 0.5em;
-  background: var(--mustard);
+  background: var(--primary-color);
   color: var(--raisin-black);
 }
 
@@ -131,7 +134,7 @@ body {
 
 .toggle-input:checked + .toggle-button::after {
   content: '';
-  background-color: var(--mustard);
+  background-color: var(--primary-color);
   transform: translateX(18px) rotate(360deg);
 }
 
@@ -140,6 +143,26 @@ body {
   margin-left: 55px;
   width: 200px;
   margin-top: -2px;
+}
+
+.config-section {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.author-section {
+  padding: 10px 20px;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+a {
+  color: var(--antiflash-white);
 }
 
 /* LOADER */
@@ -156,7 +179,7 @@ body {
   left: 8px;
   width: 13px;
   border-radius: 10px;
-  background: var(--mustard);
+  background: var(--primary-color);
   animation: lds-loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 
