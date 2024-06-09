@@ -2,7 +2,6 @@ import './style.css'
 import { ipTracker } from '../iptracker/iptracker'
 
 let currentIP = null
-let currentVersion = 4
 
 const primaryLogo = `
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
@@ -22,9 +21,7 @@ const title = chrome.i18n.getMessage('extName')
 const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
 const copyConfigText = chrome.i18n.getMessage('copyConfigText')
 const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
-const changeVersionToShowText = chrome.i18n
-  .getMessage('changeVersionToShowText')
-  .replace('{v}', currentVersion === 4 ? 6 : 4)
+const changeVersionToShowText = chrome.i18n.getMessage('changeVersionToShowText')
 const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
 const authorMessage = chrome.i18n.getMessage('authorMessage')
 const template = /* html */ `
@@ -37,7 +34,7 @@ const template = /* html */ `
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M42 19H6M30 7l12 12M6.799 29h36m-36 0l12 12"/>
     </svg> 
-    <span class="change-version-btn-text">${changeVersionToShowText}</span>
+    <span class="change-version-btn-text"></span>
   </button>
 </section>
 
@@ -74,6 +71,12 @@ function setCopyToClipboard(checked) {
   chrome.storage.sync.set({ copyToClipboardOnLoad: checked })
 }
 
+function setVersionConfig(version) {
+  chrome.storage.sync.set({
+    versionConfig: version,
+  })
+}
+
 document
   .querySelector('#clipboard-config-check')
   .addEventListener('change', async (event) => {
@@ -98,11 +101,11 @@ const renderIP = async (version = 4) => {
   }
 
   currentIP = ipResult.ip
-  currentVersion = version
+  let currentVersion = await chrome.storage.sync.get(['versionConfig'])
   showIp(ipResult.ip)
   document.querySelector('.change-version-btn-text').innerText = chrome.i18n
     .getMessage('changeVersionToShowText')
-    .replace('{v}', currentVersion === 4 ? 6 : 4)
+    .replace('{v}', currentVersion.versionConfig)
   loader(false)
   showCopyToClipboardAction()
 }
@@ -154,9 +157,12 @@ const showNotification = () => {
   chrome.notifications.create(options)
 }
 
-document.querySelector('.change-version-btn').addEventListener('click', () => {
+document.querySelector('.change-version-btn').addEventListener('click', async () => {
   hideIp()
-  renderIP(currentVersion === 4 ? 6 : 4)
+  let currentVersion = await chrome.storage.sync.get(['versionConfig'])
+  let changeToVersion = currentVersion.versionConfig === 4 ? 6 : 4;
+  setVersionConfig(changeToVersion)
+  renderIP(changeToVersion)
 })
 
 document
@@ -165,6 +171,9 @@ document
     ipTracker.copyToClipboard(currentIP, showNotification)
   })
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderIP()
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const versionConfig = await chrome.storage.sync.get(['versionConfig'])
+  const version = versionConfig.versionConfig ? versionConfig.versionConfig : 4;
+  renderIP(version)
 })

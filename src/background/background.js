@@ -7,4 +7,12 @@ chrome.runtime.onInstalled.addListener(async () => {
       copyToClipboardOnLoad: true,
     })
   }
+
+  const versionConfig = await chrome.storage.sync.get(['versionConfig'])
+  if (versionConfig.versionConfig === undefined) {
+    chrome.storage.sync.set({
+      versionConfig: 4,
+    })
+  }
+
 })
