@@ -21,7 +21,9 @@ const title = chrome.i18n.getMessage('extName')
 const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
 const copyConfigText = chrome.i18n.getMessage('copyConfigText')
 const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
-const changeVersionToShowText = chrome.i18n.getMessage('changeVersionToShowText')
+const changeVersionToShowText = chrome.i18n.getMessage(
+  'changeVersionToShowText'
+)
 const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
 const authorMessage = chrome.i18n.getMessage('authorMessage')
 const template = /* html */ `
@@ -105,7 +107,7 @@ const renderIP = async (version = 4) => {
   showIp(ipResult.ip)
   document.querySelector('.change-version-btn-text').innerText = chrome.i18n
     .getMessage('changeVersionToShowText')
-    .replace('{v}', currentVersion.versionConfig)
+    .replace('{v}', currentVersion.versionConfig === 4 ? 6 : 4)
   loader(false)
   showCopyToClipboardAction()
 }
@@ -157,13 +159,15 @@ const showNotification = () => {
   chrome.notifications.create(options)
 }
 
-document.querySelector('.change-version-btn').addEventListener('click', async () => {
-  hideIp()
-  let currentVersion = await chrome.storage.sync.get(['versionConfig'])
-  let changeToVersion = currentVersion.versionConfig === 4 ? 6 : 4;
-  setVersionConfig(changeToVersion)
-  renderIP(changeToVersion)
-})
+document
+  .querySelector('.change-version-btn')
+  .addEventListener('click', async () => {
+    hideIp()
+    let currentVersion = await chrome.storage.sync.get(['versionConfig'])
+    let changeToVersion = currentVersion.versionConfig === 4 ? 6 : 4
+    setVersionConfig(changeToVersion)
+    renderIP(changeToVersion)
+  })
 
 document
   .querySelector('.copy-to-clipboard-btn')
@@ -171,9 +175,8 @@ document
     ipTracker.copyToClipboard(currentIP, showNotification)
   })
 
-
 document.addEventListener('DOMContentLoaded', async () => {
   const versionConfig = await chrome.storage.sync.get(['versionConfig'])
-  const version = versionConfig.versionConfig ? versionConfig.versionConfig : 4;
+  const version = versionConfig.versionConfig ? versionConfig.versionConfig : 4
   renderIP(version)
 })
