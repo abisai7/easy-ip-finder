@@ -1,5 +1,6 @@
 import './style.css'
 import { ipTracker } from '../iptracker/iptracker'
+import { ipLocation } from '../iplocation/iplocation'
 
 let currentIP = null
 
@@ -53,6 +54,9 @@ const template = /* html */ `
     ${copyLogo}
   </button>
   <div class="error hide"></div>
+</section>
+
+<section class="ip-location-info-container hide">  
 </section>
 
 <section class="config-section">
@@ -110,6 +114,28 @@ const renderIP = async (version = 4) => {
     .replace('{v}', currentVersion.versionConfig === 4 ? 6 : 4)
   loader(false)
   showCopyToClipboardAction()
+}
+
+const renderIPLocationData = async (ip) => {
+  const ipLocationData = await ipLocation.fetchLocationData(ip)
+  if (ipLocationData) {
+    
+    const ipLocationContainer = document.querySelector('.ip-location-info-container')
+
+    if (ipLocationData.country) {
+      const currentLang = chrome.i18n.getUILanguage().slice(0,2)
+      const countryName = ipLocationData.country.names[currentLang] ? ipLocationData.country.names[currentLang] : ipLocationData.country.names['en']  
+      const isoCode = ipLocationData.country.iso_code
+      const countryInfoP = document.createElement('p')
+      countryInfoP.innerHTML = `Your current country: <span class="info">${countryName} (${isoCode})</span>`
+      const ispInfoP = document.createElement('p')
+      ispInfoP.innerHTML = `ISP: <span class="info">${ipLocationData.traits.isp}</span>`
+      ipLocationContainer.append(countryInfoP)
+      ipLocationContainer.append(ispInfoP)
+      ipLocationContainer.classList.remove('hide')
+    }
+
+  }
 }
 
 const showCopyToClipboardAction = () => {
@@ -178,5 +204,10 @@ document
 document.addEventListener('DOMContentLoaded', async () => {
   const versionConfig = await chrome.storage.sync.get(['versionConfig'])
   const version = versionConfig.versionConfig ? versionConfig.versionConfig : 4
-  renderIP(version)
+  await renderIP(version)
+
+  if (currentIP) {
+    renderIPLocationData(currentIP)
+  }
+
 })

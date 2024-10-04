@@ -24,6 +24,9 @@
         "storage",
         "notifications"
     ],
+    "host_permissions": [
+        "https://api.findip.net/*"
+    ],
     "background": {
         "service_worker": "src/background/background.js",
         "type": "module"

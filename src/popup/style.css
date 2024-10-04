@@ -52,7 +52,26 @@ body {
   border-radius: 10px;
   padding: 5px;
   gap: 10px;
-  margin: 0 20px;
+  margin: 0 20px 20px;
+  border: 2px dashed;
+}
+
+.ip-location-info-container {
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  margin: 0 20px 20px;
+  border: 2px dashed;
+  font-size: 14px;
+}
+
+.ip-location-info-container ul li {
+  margin: 0 0 5px 0;
+}
+
+.ip-location-info-container .info {
+  font-weight: bold;
+  color: var(--antiflash-white);
 }
 
 .ip-container h1 {
