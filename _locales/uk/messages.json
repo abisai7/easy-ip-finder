@@ -38,5 +38,13 @@
     "authorMessage": {
         "message": "Розроблено <a href=\"https://abisai.dev\" target=\"_blank\">Абі Геррерою</a> 🇬🇹",
         "description": "Повідомлення від автора"
+    },
+    "yourCurrentCountryMessage": {
+        "message": "Ваша поточна країна",
+        "description": "Повідомлення про вашу поточну країну"
+    },
+    "ispMessage": {
+        "message": "ISP",
+        "description": "Повідомлення ISP"
     }
 }

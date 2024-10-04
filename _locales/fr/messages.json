@@ -38,5 +38,13 @@
   "authorMessage": {
     "message": "Propulsé par <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
     "description": "Message de l'auteur"
+  },
+  "yourCurrentCountryMessage": {
+    "message": "Votre pays actuel",
+    "description": "Message de votre pays actuel"
+  },
+  "ispMessage": {
+    "message": "ISP",
+    "description": "Message ISP"
   }
 }

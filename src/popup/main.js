@@ -25,6 +25,8 @@ const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
 const changeVersionToShowText = chrome.i18n.getMessage(
   'changeVersionToShowText'
 )
+const yourCurrentCountryMessage = chrome.i18n.getMessage('yourCurrentCountryMessage')
+const ispMessage = chrome.i18n.getMessage('ispMessage')
 const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
 const authorMessage = chrome.i18n.getMessage('authorMessage')
 const template = /* html */ `
@@ -127,9 +129,9 @@ const renderIPLocationData = async (ip) => {
       const countryName = ipLocationData.country.names[currentLang] ? ipLocationData.country.names[currentLang] : ipLocationData.country.names['en']  
       const isoCode = ipLocationData.country.iso_code
       const countryInfoP = document.createElement('p')
-      countryInfoP.innerHTML = `Your current country: <span class="info">${countryName} (${isoCode})</span>`
+      countryInfoP.innerHTML = `${yourCurrentCountryMessage}: <span class="info">${countryName} (${isoCode})</span>`
       const ispInfoP = document.createElement('p')
-      ispInfoP.innerHTML = `ISP: <span class="info">${ipLocationData.traits.isp}</span>`
+      ispInfoP.innerHTML = `${ispMessage}: <span class="info">${ipLocationData.traits.isp}</span>`
       ipLocationContainer.append(countryInfoP)
       ipLocationContainer.append(ispInfoP)
       ipLocationContainer.classList.remove('hide')

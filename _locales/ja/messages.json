@@ -38,5 +38,13 @@
     "authorMessage": {
         "message": "<a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹 によって提供されています",
         "description": "作者メッセージ"
+    },
+    "yourCurrentCountryMessage": {
+        "message": "現在の国",
+        "description": "現在の国メッセージ"
+    },
+    "ispMessage": {
+        "message": "ISP",
+        "description": "ISPメッセージ"
     }
 }

@@ -33,5 +33,10 @@
     },
     "author": {
         "email": "d_abisai7@outlook.com"
+    },
+    "content_security_policy": {
+        "extension_settings": {
+            "API_KEY_FINDIP": "your_api_key"
+        }
     }
 }
