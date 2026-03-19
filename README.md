@@ -76,7 +76,6 @@ If you wish to contribute to this project, your input is welcome! Please send a 
 
 Abisai Herrera
 
-- Email: <d_abisai7@outlook.com>
 - Website: <https://abisai.dev>
 
 ## License
