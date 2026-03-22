@@ -34,7 +34,7 @@ cd easy-ip-finder
 With the repository cloned, install the project dependencies by running:
 
 ```bash
-npm i
+pnpm i
 ```
 
 ### Run in Developer Mode
@@ -42,7 +42,7 @@ npm i
 To start the development server and work on improvements:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Generate the Build
@@ -50,7 +50,7 @@ npm run dev
 Once you're ready to build the extension for use:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Run in developer mode or generating the build will generate a dist folder containing the local (dev) or production (build) version of the extension.
