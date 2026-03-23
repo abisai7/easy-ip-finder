@@ -5,8 +5,11 @@
   --dim-gray: #696773ff;
   --antiflash-white: #eff1f3ff;
 
-
   --primary-color: var(--mustard);
+}
+
+#app {
+  max-width: fit-content;
 }
 
 body {
@@ -24,7 +27,6 @@ body {
 .hide {
   display: none !important;
 }
-
 
 .top-section {
   display: flex;
@@ -45,15 +47,32 @@ body {
   fill: var(--primary-color);
 }
 
+.ip-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 20px 20px;
+  border: 2px dashed;
+  padding: 10px 20px;
+}
+
 .ip-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 10px;
-  padding: 5px;
   gap: 10px;
-  margin: 0 20px 20px;
-  border: 2px dashed;
+}
+
+.more-ip-info {
+  width: 100%;
+  color: var(--mustard);
+}
+
+.detail-info {
+  font-weight: bold;
+  color: var(--antiflash-white);
 }
 
 .ip-location-info-container {
@@ -85,7 +104,8 @@ body {
   padding: 20px;
 }
 
-.copy-to-clipboard-btn, .change-version-btn {
+.copy-to-clipboard-btn,
+.change-version-btn {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -100,8 +120,8 @@ body {
 
 .copy-to-clipboard-btn {
   svg {
-      width: 25px;
-      height: 25px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -128,7 +148,7 @@ body {
   display: inline-block;
   width: 45px;
   height: 27px;
-  background-color: #E7E2CD;
+  background-color: #e7e2cd;
   border-radius: 22px;
   position: relative;
   cursor: pointer;
@@ -139,16 +159,16 @@ body {
   width: 22px;
   height: 22px;
   background-color: var(--dim-gray);
-  border: 2px solid #E7E2CD;
+  border: 2px solid #e7e2cd;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 0;
   left: 1px;
   line-height: 0;
   display: grid;
   place-content: center;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .toggle-input:checked + .toggle-button::after {
@@ -219,13 +239,13 @@ a {
 
 @keyframes lds-loading {
   0% {
-      top: 8px;
-      height: 64px;
+    top: 8px;
+    height: 64px;
   }
 
   50%,
   100% {
-      top: 24px;
-      height: 32px;
+    top: 24px;
+    height: 32px;
   }
 }

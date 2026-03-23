@@ -1,6 +1,8 @@
 import './style.css'
 import { ipTracker } from '../iptracker/iptracker'
 import { ipLocation } from '../iplocation/iplocation'
+import { popupStorage } from './storage'
+import { createPopupUI } from './ui'
 
 let currentIP = null
 
@@ -23,9 +25,11 @@ const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
 const copyConfigText = chrome.i18n.getMessage('copyConfigText')
 const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
 const changeVersionToShowText = chrome.i18n.getMessage(
-  'changeVersionToShowText'
+  'changeVersionToShowText',
 )
-const yourCurrentCountryMessage = chrome.i18n.getMessage('yourCurrentCountryMessage')
+const yourCurrentCountryMessage = chrome.i18n.getMessage(
+  'yourCurrentCountryMessage',
+)
 const ispMessage = chrome.i18n.getMessage('ispMessage')
 const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
 const authorMessage = chrome.i18n.getMessage('authorMessage')
@@ -43,8 +47,9 @@ const template = /* html */ `
   </button>
 </section>
 
-<section class="ip-container">
-  <div class="lds-loading">
+<section class="ip-section">
+<div class="ip-container">  
+<div class="lds-loading">
     <div></div>
     <div></div>
     <div></div>
@@ -56,6 +61,8 @@ const template = /* html */ `
     ${copyLogo}
   </button>
   <div class="error hide"></div>
+  </div>
+  <div class="more-ip-info hide"></div>
 </section>
 
 <section class="ip-location-info-container hide">  
@@ -75,105 +82,83 @@ const template = /* html */ `
 
 document.querySelector('#app').innerHTML = template
 
-function setCopyToClipboard(checked) {
-  chrome.storage.sync.set({ copyToClipboardOnLoad: checked })
+const elements = {
+  clipboardConfigCheck: document.querySelector('#clipboard-config-check'),
+  changeVersionButton: document.querySelector('.change-version-btn'),
+  changeVersionButtonText: document.querySelector('.change-version-btn-text'),
+  copyToClipboardButton: document.querySelector('.copy-to-clipboard-btn'),
+  loader: document.querySelector('.lds-loading'),
+  error: document.querySelector('.error'),
+  ip: document.querySelector('x-ip'),
+  moreIpInfo: document.querySelector('.more-ip-info'),
 }
 
-function setVersionConfig(version) {
-  chrome.storage.sync.set({
-    versionConfig: version,
-  })
-}
+const currentLang = chrome.i18n.getUILanguage().slice(0, 2)
+const regionNames = new Intl.DisplayNames([currentLang], {
+  type: 'region',
+})
+
+const ui = createPopupUI(
+  elements,
+  {
+    changeVersionToShowText,
+    yourCurrentCountryMessage,
+    ispMessage,
+  },
+  regionNames,
+)
+
+let activeRenderId = 0
+let isRendering = false
 
 document
   .querySelector('#clipboard-config-check')
   .addEventListener('change', async (event) => {
-    setCopyToClipboard(event.target.checked)
+    await popupStorage.setCopyToClipboardOnLoad(event.target.checked)
   })
 
 const renderIP = async (version = 4) => {
-  loader(true)
-  const config = await chrome.storage.sync.get(['copyToClipboardOnLoad'])
-  document.querySelector('#clipboard-config-check').checked =
-    config.copyToClipboardOnLoad
+  const renderId = ++activeRenderId
+  isRendering = true
+  ui.setVersionButtonDisabled(true)
+  ui.setLoading(true)
+  ui.resetBeforeRender()
+  const shouldCopyOnLoad = await popupStorage.getCopyToClipboardOnLoad()
+  ui.setCopyOnLoadChecked(shouldCopyOnLoad)
 
   const ipResult = await ipTracker.init(
     version,
-    config.copyToClipboardOnLoad,
-    showNotification
+    shouldCopyOnLoad,
+    showNotification,
   )
 
+  if (renderId !== activeRenderId) {
+    return
+  }
+
   if (ipResult.ip == null) {
-    loader(false)
-    return renderError(`${genericErrorMessage} ${ipResult.error}`)
+    ui.setLoading(false)
+    ui.setVersionButtonDisabled(false)
+    isRendering = false
+    return ui.renderError(`${genericErrorMessage} ${ipResult.error}`)
   }
 
   currentIP = ipResult.ip
-  let currentVersion = await chrome.storage.sync.get(['versionConfig'])
-  showIp(ipResult.ip)
-  document.querySelector('.change-version-btn-text').innerText = chrome.i18n
-    .getMessage('changeVersionToShowText')
-    .replace('{v}', currentVersion.versionConfig === 4 ? 6 : 4)
-  loader(false)
-  showCopyToClipboardAction()
+  ui.showIp(ipResult.ip)
+  ui.updateVersionToggleText(version)
+  ui.setLoading(false)
+  ui.showCopyToClipboardAction()
+  await renderIPLocationData(renderId, currentIP)
+  ui.setVersionButtonDisabled(false)
+  isRendering = false
 }
 
-const renderIPLocationData = async (ip) => {
+const renderIPLocationData = async (renderId, ip) => {
   const ipLocationData = await ipLocation.fetchLocationData(ip)
-  if (ipLocationData) {
-    
-    const ipLocationContainer = document.querySelector('.ip-location-info-container')
-
-    if (ipLocationData.country) {
-      const currentLang = chrome.i18n.getUILanguage().slice(0,2)
-      const countryName = ipLocationData.country.names[currentLang] ? ipLocationData.country.names[currentLang] : ipLocationData.country.names['en']  
-      const isoCode = ipLocationData.country.iso_code
-      const countryInfoP = document.createElement('p')
-      countryInfoP.innerHTML = `${yourCurrentCountryMessage}: <span class="info">${countryName} (${isoCode})</span>`
-      const ispInfoP = document.createElement('p')
-      ispInfoP.innerHTML = `${ispMessage}: <span class="info">${ipLocationData.traits.isp}</span>`
-      ipLocationContainer.append(countryInfoP)
-      ipLocationContainer.append(ispInfoP)
-      ipLocationContainer.classList.remove('hide')
-    }
-
+  if (renderId !== activeRenderId || !ipLocationData) {
+    return
   }
-}
-
-const showCopyToClipboardAction = () => {
-  const copyToClipboardButton = document.querySelector('.copy-to-clipboard-btn')
-  copyToClipboardButton.classList.remove('hide')
-  copyToClipboardButton.classList.add('show')
-}
-
-const loader = (show = true) => {
-  const loaderElement = document.querySelector('.lds-loading')
-  if (show) {
-    loaderElement.classList.remove('hide')
-    loaderElement.classList.add('show')
-  } else {
-    loaderElement.classList.remove('show')
-    loaderElement.classList.add('hide')
-  }
-}
-
-const renderError = (errorMessage) => {
-  const errorElement = document.querySelector('.error')
-  errorElement.innerHTML = `${errorMessage}`
-  errorElement.classList.remove('hide')
-}
-
-const showIp = (ip) => {
-  const ipElement = document.querySelector('x-ip')
-  ipElement.innerText = ip
-  ipElement.classList.remove('hide')
-  ipElement.classList.add('show')
-}
-
-const hideIp = () => {
-  const ipElement = document.querySelector('x-ip')
-  ipElement.classList.remove('show')
-  ipElement.classList.add('hide')
+  ui.renderIPLocationData(ipLocationData)
 }
 
 const showNotification = () => {
@@ -190,11 +175,14 @@ const showNotification = () => {
 document
   .querySelector('.change-version-btn')
   .addEventListener('click', async () => {
-    hideIp()
-    let currentVersion = await chrome.storage.sync.get(['versionConfig'])
-    let changeToVersion = currentVersion.versionConfig === 4 ? 6 : 4
-    setVersionConfig(changeToVersion)
-    renderIP(changeToVersion)
+    if (isRendering) {
+      return
+    }
+
+    const currentVersion = await popupStorage.getVersionConfig()
+    const changeToVersion = currentVersion === 4 ? 6 : 4
+    await popupStorage.setVersionConfig(changeToVersion)
+    await renderIP(changeToVersion)
   })
 
 document
@@ -204,12 +192,6 @@ document
   })
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const versionConfig = await chrome.storage.sync.get(['versionConfig'])
-  const version = versionConfig.versionConfig ? versionConfig.versionConfig : 4
+  const version = await popupStorage.getVersionConfig()
   await renderIP(version)
-
-  if (currentIP) {
-    renderIPLocationData(currentIP)
-  }
-
 })

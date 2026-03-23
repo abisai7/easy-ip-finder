@@ -24,19 +24,11 @@
         "storage",
         "notifications"
     ],
-    "host_permissions": [
-        "https://api.findip.net/*"
-    ],
     "background": {
         "service_worker": "src/background/background.js",
         "type": "module"
     },
     "author": {
-        "email": "d_abisai7@outlook.com"
-    },
-    "content_security_policy": {
-        "extension_settings": {
-            "API_KEY_FINDIP": "your_api_key"
-        }
+        "email": "abisaidev7@outlook.com"
     }
 }
