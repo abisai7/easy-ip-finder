@@ -50,9 +50,6 @@ export const renderPopupTemplate = ({
   <div class="more-ip-info hide"></div>
 </section>
 
-<section class="ip-location-info-container hide">  
-</section>
-
 <section class="config-section">
   <div class="clipboard-config">
     <input class="toggle-input" type="checkbox" id="clipboard-config-check" />

@@ -45,6 +45,14 @@ To start the development server and work on improvements:
 pnpm run dev
 ```
 
+### Run tests
+
+To run the tests for the project:
+
+```bash
+pnpm run test
+```
+
 ### Generate the Build
 
 Once you're ready to build the extension for use:

@@ -1,18 +1,24 @@
+import { DEFAULT_SETTINGS, STORAGE_KEYS } from '../shared/settings'
+
 // Set default config
 chrome.runtime.onInstalled.addListener(async () => {
-  const config = await chrome.storage.sync.get(['copyToClipboardOnLoad'])
+  const config = await chrome.storage.sync.get([
+    STORAGE_KEYS.copyToClipboardOnLoad,
+    STORAGE_KEYS.versionConfig,
+  ])
 
-  if (config.copyToClipboardOnLoad === undefined) {
-    chrome.storage.sync.set({
-      copyToClipboardOnLoad: true,
-    })
+  const updates = {}
+
+  if (config[STORAGE_KEYS.copyToClipboardOnLoad] === undefined) {
+    updates[STORAGE_KEYS.copyToClipboardOnLoad] =
+      DEFAULT_SETTINGS.copyToClipboardOnLoad
   }
 
-  const versionConfig = await chrome.storage.sync.get(['versionConfig'])
-  if (versionConfig.versionConfig === undefined) {
-    chrome.storage.sync.set({
-      versionConfig: 4,
-    })
+  if (config[STORAGE_KEYS.versionConfig] === undefined) {
+    updates[STORAGE_KEYS.versionConfig] = DEFAULT_SETTINGS.versionConfig
   }
 
+  if (Object.keys(updates).length > 0) {
+    await chrome.storage.sync.set(updates)
+  }
 })

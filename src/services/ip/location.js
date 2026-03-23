@@ -1,9 +1,9 @@
 export const ipLocation = {
-  API_URL: `https://api.country.is/{IP}?fields=city,continent,asn`,
+  API_URL: 'https://api.country.is/{IP}?fields=city,continent,asn',
 
   fetchLocationData: async (ip) => {
     try {
-      let url = ipLocation.API_URL.replace('{IP}', ip)
+      const url = ipLocation.API_URL.replace('{IP}', ip)
       const response = await fetch(url)
       if (!response.ok) {
         throw new Error('Failed to fetch Location Data from api')

@@ -1,42 +1,24 @@
 import './style.css'
-import { ipTracker } from '../iptracker/iptracker'
-import { ipLocation } from '../iplocation/iplocation'
+import { ipTracker } from '../services/ip/tracker'
+import { ipLocation } from '../services/ip/location'
 import { popupStorage } from './storage'
 import { createPopupUI } from './ui'
 import { createPopupController } from './controller'
 import { renderPopupTemplate } from './template'
+import { getPopupElements } from './elements'
+import { getPopupMessages } from './messages'
 
-const title = chrome.i18n.getMessage('extName')
-const copyToClipboardAction = chrome.i18n.getMessage('copyToClipboardAction')
-const copyConfigText = chrome.i18n.getMessage('copyConfigText')
-const genericErrorMessage = chrome.i18n.getMessage('genericErrorMessage')
-const changeVersionToShowText = chrome.i18n.getMessage(
-  'changeVersionToShowText',
-)
-const yourCurrentCountryMessage = chrome.i18n.getMessage(
-  'yourCurrentCountryMessage',
-)
-const ispMessage = chrome.i18n.getMessage('ispMessage')
-const rateUsMessage = chrome.i18n.getMessage('rateUsMessage')
-const authorMessage = chrome.i18n.getMessage('authorMessage')
+const messages = getPopupMessages()
+
 document.querySelector('#app').innerHTML = renderPopupTemplate({
-  title,
-  copyToClipboardAction,
-  copyConfigText,
-  rateUsMessage,
-  authorMessage,
+  title: messages.title,
+  copyToClipboardAction: messages.copyToClipboardAction,
+  copyConfigText: messages.copyConfigText,
+  rateUsMessage: messages.rateUsMessage,
+  authorMessage: messages.authorMessage,
 })
 
-const elements = {
-  clipboardConfigCheck: document.querySelector('#clipboard-config-check'),
-  changeVersionButton: document.querySelector('.change-version-btn'),
-  changeVersionButtonText: document.querySelector('.change-version-btn-text'),
-  copyToClipboardButton: document.querySelector('.copy-to-clipboard-btn'),
-  loader: document.querySelector('.lds-loading'),
-  error: document.querySelector('.error'),
-  ip: document.querySelector('x-ip'),
-  moreIpInfo: document.querySelector('.more-ip-info'),
-}
+const elements = getPopupElements()
 
 const currentLang = chrome.i18n.getUILanguage().slice(0, 2)
 const regionNames = new Intl.DisplayNames([currentLang], {
@@ -46,9 +28,9 @@ const regionNames = new Intl.DisplayNames([currentLang], {
 const ui = createPopupUI(
   elements,
   {
-    changeVersionToShowText,
-    yourCurrentCountryMessage,
-    ispMessage,
+    changeVersionToShowText: messages.changeVersionToShowText,
+    yourCurrentCountryMessage: messages.yourCurrentCountryMessage,
+    ispMessage: messages.ispMessage,
   },
   regionNames,
 )
@@ -56,8 +38,8 @@ const ui = createPopupUI(
 const showNotification = () => {
   const options = {
     type: 'basic',
-    title: chrome.i18n.getMessage('extName'),
-    message: chrome.i18n.getMessage('ipCopiedText'),
+    title: messages.title,
+    message: messages.ipCopiedText,
     iconUrl: '/icon128.png',
     silent: true,
   }
@@ -70,7 +52,7 @@ const controller = createPopupController({
   popupStorage,
   ipTracker,
   ipLocation,
-  genericErrorMessage,
+  genericErrorMessage: messages.genericErrorMessage,
   onCopyNotification: showNotification,
 })
 

@@ -1,3 +1,5 @@
+import { IP_VERSIONS } from '../shared/settings'
+
 export const createPopupController = ({
   elements,
   ui,
@@ -74,7 +76,8 @@ export const createPopupController = ({
       isVersionSwitching = true
       try {
         const currentVersion = await popupStorage.getVersionConfig()
-        const changeToVersion = currentVersion === 4 ? 6 : 4
+        const changeToVersion =
+          currentVersion === IP_VERSIONS.v4 ? IP_VERSIONS.v6 : IP_VERSIONS.v4
         await popupStorage.setVersionConfig(changeToVersion)
         await renderIP(changeToVersion)
       } finally {
