@@ -10,6 +10,7 @@ export const createPopupController = ({
   let currentIP = null
   let activeRenderId = 0
   let isRendering = false
+  let isVersionSwitching = false
 
   const renderIPLocationData = async (renderId, ip) => {
     const ipLocationData = await ipLocation.fetchLocationData(ip)
@@ -66,14 +67,19 @@ export const createPopupController = ({
     })
 
     elements.changeVersionButton.addEventListener('click', async () => {
-      if (isRendering) {
+      if (isRendering || isVersionSwitching) {
         return
       }
 
-      const currentVersion = await popupStorage.getVersionConfig()
-      const changeToVersion = currentVersion === 4 ? 6 : 4
-      await popupStorage.setVersionConfig(changeToVersion)
-      await renderIP(changeToVersion)
+      isVersionSwitching = true
+      try {
+        const currentVersion = await popupStorage.getVersionConfig()
+        const changeToVersion = currentVersion === 4 ? 6 : 4
+        await popupStorage.setVersionConfig(changeToVersion)
+        await renderIP(changeToVersion)
+      } finally {
+        isVersionSwitching = false
+      }
     })
 
     elements.copyToClipboardButton.addEventListener('click', () => {
