@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "Easy IP Finder",
+    "description": "Nama ekstensi"
+  },
+  "extShortName": {
+    "message": "EasyIPFinder",
+    "description": "Nama pendek ekstensi"
+  },
+  "extDescription": {
+    "message": "Ekstensi Chrome ini menampilkan IP publik Anda dengan cepat dari toolbar browser, ideal untuk pengguna yang sering memeriksa IP mereka.",
+    "description": "Deskripsi ekstensi"
+  },
+  "copyToClipboardAction": {
+    "message": "Salin IP ke Clipboard",
+    "description": "Label aksi salin ke clipboard"
+  },
+  "copyConfigText": {
+    "message": "Salin IP ke clipboard saat membuka popup",
+    "description": "Label konfigurasi salin otomatis"
+  },
+  "ipCopiedText": {
+    "message": "IP disalin ke clipboard",
+    "description": "Teks notifikasi"
+  },
+  "genericErrorMessage": {
+    "message": "Terjadi kesalahan, mohon maaf atas ketidaknyamanannya. Silakan coba lagi. Referensi: ",
+    "description": "Teks kesalahan umum"
+  },
+  "changeVersionToShowText": {
+    "message": "Ubah ke IPv{v}",
+    "description": "Teks tombol ubah versi"
+  },
+  "rateUsMessage": {
+    "message": "Suka dengan ekstensi ini? 🌟 Silakan <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>beri kami rating!</a> Masukan Anda membantu kami terus berkembang. Terima kasih!",
+    "description": "Pesan untuk memberi rating"
+  },
+  "authorMessage": {
+    "message": "Didukung oleh <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+    "description": "Pesan penulis"
+  },
+  "yourCurrentCountryMessage": {
+    "message": "Negara Anda saat ini",
+    "description": "Pesan negara saat ini"
+  },
+  "ispMessage": {
+    "message": "ISP",
+    "description": "Pesan ISP"
+  }
+}

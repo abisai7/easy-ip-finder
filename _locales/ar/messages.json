@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "Easy IP Finder",
+    "description": "اسم الإضافة"
+  },
+  "extShortName": {
+    "message": "EasyIPFinder",
+    "description": "الاسم المختصر للإضافة"
+  },
+  "extDescription": {
+    "message": "تعرض إضافة Chrome هذه عنوان IP العام الخاص بك بسرعة من شريط المتصفح، وهي مثالية للمستخدمين الذين يتحققون من عنوان IP بشكل متكرر.",
+    "description": "وصف الإضافة"
+  },
+  "copyToClipboardAction": {
+    "message": "نسخ عنوان IP إلى الحافظة",
+    "description": "تسمية إجراء النسخ إلى الحافظة"
+  },
+  "copyConfigText": {
+    "message": "نسخ عنوان IP إلى الحافظة عند فتح النافذة المنبثقة",
+    "description": "تسمية إعداد النسخ التلقائي"
+  },
+  "ipCopiedText": {
+    "message": "تم نسخ عنوان IP إلى الحافظة",
+    "description": "نص الإشعار"
+  },
+  "genericErrorMessage": {
+    "message": "حدث خطأ، نعتذر عن الإزعاج. يرجى المحاولة مرة أخرى. المرجع: ",
+    "description": "نص الخطأ العام"
+  },
+  "changeVersionToShowText": {
+    "message": "التبديل إلى IPv{v}",
+    "description": "نص زر تغيير الإصدار"
+  },
+  "rateUsMessage": {
+    "message": "هل أعجبتك الإضافة؟ 🌟 يرجى <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>تقييمنا!</a> ملاحظاتك تساعدنا على التحسين. شكرًا لك!",
+    "description": "رسالة التقييم"
+  },
+  "authorMessage": {
+    "message": "بدعم من <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+    "description": "رسالة المؤلف"
+  },
+  "yourCurrentCountryMessage": {
+    "message": "بلدك الحالي",
+    "description": "رسالة بلدك الحالي"
+  },
+  "ispMessage": {
+    "message": "مزود خدمة الإنترنت",
+    "description": "رسالة مزود الخدمة"
+  }
+}

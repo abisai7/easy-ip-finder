@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "Easy IP Finder",
+    "description": "扩展名称"
+  },
+  "extShortName": {
+    "message": "EasyIPFinder",
+    "description": "扩展简称"
+  },
+  "extDescription": {
+    "message": "此 Chrome 扩展可在浏览器工具栏中快速显示您的公网 IP，适合经常需要查看 IP 的用户。",
+    "description": "扩展描述"
+  },
+  "copyToClipboardAction": {
+    "message": "复制 IP 到剪贴板",
+    "description": "复制到剪贴板操作标签"
+  },
+  "copyConfigText": {
+    "message": "打开弹窗时自动复制 IP 到剪贴板",
+    "description": "自动复制配置标签"
+  },
+  "ipCopiedText": {
+    "message": "IP 已复制到剪贴板",
+    "description": "通知文本"
+  },
+  "genericErrorMessage": {
+    "message": "发生错误，给您带来不便我们深感抱歉。请重试。参考：",
+    "description": "通用错误文本"
+  },
+  "changeVersionToShowText": {
+    "message": "切换到 IPv{v}",
+    "description": "切换版本按钮文本"
+  },
+  "rateUsMessage": {
+    "message": "喜欢这个扩展吗？🌟 请<a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>给我们评分！</a>您的反馈能帮助我们不断改进。谢谢！",
+    "description": "评分提示信息"
+  },
+  "authorMessage": {
+    "message": "由 <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 提供支持 🇬🇹",
+    "description": "作者信息"
+  },
+  "yourCurrentCountryMessage": {
+    "message": "您当前所在国家",
+    "description": "当前国家提示"
+  },
+  "ispMessage": {
+    "message": "运营商",
+    "description": "ISP 信息"
+  }
+}

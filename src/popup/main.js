@@ -20,7 +20,13 @@ document.querySelector('#app').innerHTML = renderPopupTemplate({
 
 const elements = getPopupElements()
 
-const currentLang = chrome.i18n.getUILanguage().slice(0, 2)
+const uiLanguage = chrome.i18n.getUILanguage()
+const currentLang = uiLanguage.split(/[-_]/)[0]
+const isRtlLanguage = ['ar', 'he', 'fa', 'ur'].includes(currentLang)
+
+document.documentElement.lang = uiLanguage
+document.documentElement.dir = isRtlLanguage ? 'rtl' : 'ltr'
+
 const regionNames = new Intl.DisplayNames([currentLang], {
   type: 'region',
 })

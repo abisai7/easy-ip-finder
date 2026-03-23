@@ -18,6 +18,7 @@ body {
   background-color: var(--raisin-black);
   color: var(--primary-color);
   font-family: system-ui, sans-serif;
+  text-align: start;
 }
 
 .show {
@@ -161,9 +162,18 @@ body {
 
 .toggle-button span {
   position: absolute;
-  margin-left: 55px;
+  margin-inline-start: 55px;
   width: 200px;
   margin-top: -2px;
+}
+
+[dir='rtl'] .toggle-button::after {
+  left: auto;
+  right: 1px;
+}
+
+[dir='rtl'] .toggle-input:checked + .toggle-button::after {
+  transform: translateX(-18px) rotate(360deg);
 }
 
 .author-section {
