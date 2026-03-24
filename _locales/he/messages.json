@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "מוצא IP קל",
-        "description": "שם התוסף"
-    },
-    "extShortName": {
-        "message": "מוצאIPקל",
-        "description": "שם תקצירי של התוסף"
-    },
-    "extDescription": {
-        "message": "תוסף זה של Chrome מציג במהירות את כתובת ה-IP הציבורית שלך בתוך סרגל הכלים של הדפדפן, אידיאלי למשתמשים שבדקו את כתובת ה-IP שלהם לעתים תכופות.",
-        "description": "תיאור התוסף"
-    },
-    "copyToClipboardAction": {
-        "message": "העתק את כתובת ה-IP ללוח",
-        "description": "תווית פעולת העתקה ללוח"
-    },
-    "copyConfigText": {
-        "message": "העתק את כתובת ה-IP ללוח כאשר פותחת החלון הקופץ",
-        "description": "תווית תצורה להעתקה אוטומטית"
-    },
-    "ipCopiedText": {
-        "message": "כתובת ה-IP הועתקה ללוח",
-        "description": "טקסט הודעת התראה"
-    },
-    "genericErrorMessage": {
-        "message": "אירעה שגיאה, מצטערים על התקלה. אנא נסה שוב. קישור: ",
-        "description": "טקסט שגיאה כללי"
-    },
-    "changeVersionToShowText": {
-        "message": "שנה ל-IPv{v}",
-        "description": "טקסט לחצן לשינוי גרסה"
-    },
-    "rateUsMessage": {
-        "message": "נהנים מהתוסף? 🌟 אנא <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>דרגו אותנו!</a> משוב שלכם עוזר לנו לשפר. תודה!",
-        "description": "הודעת דירוג"
-    },
-    "authorMessage": {
-        "message": "מופעל על ידי <a href=\"https://abisai.dev\" target=\"_blank\">אבי הררה</a> 🇬🇹",
-        "description": "הודעת המחבר"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "אתר המדינה הנוכחית שלך",
-        "description": "הודעת אתר המדינה הנוכחית שלך"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "הודעת ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "מידע על פרטיות",
-        "description": "כותרת לחצן מידע צניעות"
-    },
-    "privacyInfoMessage": {
-        "message": "תוסף זה אינו אוסף או שומר נתונים אישיים של המשתמש. כדי להציג את כתובת ה-IP והמיקום המשוער, הוא פונה ל-API של צד שלישי: ipify.org ו-country.is.",
-        "description": "הודעת לוח הצנעות"
-    }
+	"extName": {
+		"message": "מוצא IP קל",
+		"description": "שם התוסף"
+	},
+	"extShortName": {
+		"message": "מוצאIPקל",
+		"description": "שם תקצירי של התוסף"
+	},
+	"extDescription": {
+		"message": "תוסף זה של Chrome מציג במהירות את כתובת ה-IP הציבורית שלך בתוך סרגל הכלים של הדפדפן, אידיאלי למשתמשים שבדקו את כתובת ה-IP שלהם לעתים תכופות.",
+		"description": "תיאור התוסף"
+	},
+	"copyToClipboardAction": {
+		"message": "העתק את כתובת ה-IP ללוח",
+		"description": "תווית פעולת העתקה ללוח"
+	},
+	"copyConfigText": {
+		"message": "העתק את כתובת ה-IP ללוח כאשר פותחת החלון הקופץ",
+		"description": "תווית תצורה להעתקה אוטומטית"
+	},
+	"ipCopiedText": {
+		"message": "כתובת ה-IP הועתקה ללוח",
+		"description": "טקסט הודעת התראה"
+	},
+	"genericErrorMessage": {
+		"message": "אירעה שגיאה, מצטערים על התקלה. אנא נסה שוב. קישור: ",
+		"description": "טקסט שגיאה כללי"
+	},
+	"changeVersionToShowText": {
+		"message": "שנה ל-IPv{v}",
+		"description": "טקסט לחצן לשינוי גרסה"
+	},
+	"rateUsMessage": {
+		"message": "נהנים מהתוסף? 🌟 אנא <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>דרגו אותנו!</a> משוב שלכם עוזר לנו לשפר. תודה!",
+		"description": "הודעת דירוג"
+	},
+	"authorMessage": {
+		"message": "מופעל על ידי <a href=\"https://abisai.dev\" target=\"_blank\">אבי הררה</a> 🇬🇹",
+		"description": "הודעת המחבר"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "אתר המדינה הנוכחית שלך",
+		"description": "הודעת אתר המדינה הנוכחית שלך"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "הודעת ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "מידע על פרטיות",
+		"description": "כותרת לחצן מידע צניעות"
+	},
+	"privacyInfoMessage": {
+		"message": "תוסף זה אינו אוסף או שומר נתונים אישיים של המשתמש. כדי להציג את כתובת ה-IP והמיקום המשוער, הוא פונה ל-API של צד שלישי: ipify.org ו-country.is.",
+		"description": "הודעת לוח הצנעות"
+	}
 }

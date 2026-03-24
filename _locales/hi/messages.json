@@ -1,58 +1,58 @@
 {
-  "extName": {
-    "message": "Easy IP Finder",
-    "description": "एक्सटेंशन का नाम"
-  },
-  "extShortName": {
-    "message": "EasyIPFinder",
-    "description": "एक्सटेंशन का छोटा नाम"
-  },
-  "extDescription": {
-    "message": "यह Chrome एक्सटेंशन ब्राउज़र टूलबार से आपकी सार्वजनिक IP जल्दी दिखाता है, उन उपयोगकर्ताओं के लिए आदर्श जो अक्सर अपनी IP जांचते हैं।",
-    "description": "एक्सटेंशन का विवरण"
-  },
-  "copyToClipboardAction": {
-    "message": "IP क्लिपबोर्ड पर कॉपी करें",
-    "description": "क्लिपबोर्ड पर कॉपी करने के लिए एक्शन लेबल"
-  },
-  "copyConfigText": {
-    "message": "पॉपअप खोलते समय IP क्लिपबोर्ड पर कॉपी करें",
-    "description": "स्वचालित कॉपी कॉन्फ़िगरेशन लेबल"
-  },
-  "ipCopiedText": {
-    "message": "IP क्लिपबोर्ड पर कॉपी हो गई",
-    "description": "नोटिफिकेशन के लिए टेक्स्ट"
-  },
-  "genericErrorMessage": {
-    "message": "एक त्रुटि हुई है, असुविधा के लिए खेद है। कृपया फिर से प्रयास करें। संदर्भ: ",
-    "description": "सामान्य त्रुटि टेक्स्ट"
-  },
-  "changeVersionToShowText": {
-    "message": "IPv{v} पर बदलें",
-    "description": "संस्करण बदलने वाले बटन का टेक्स्ट"
-  },
-  "rateUsMessage": {
-    "message": "क्या आपको एक्सटेंशन पसंद आया? 🌟 कृपया <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>रेट करें!</a> आपकी प्रतिक्रिया हमें बेहतर बनने में मदद करती है। धन्यवाद!",
-    "description": "रेट करने का संदेश"
-  },
-  "authorMessage": {
-    "message": "द्वारा संचालित <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-    "description": "लेखक संदेश"
-  },
-  "yourCurrentCountryMessage": {
-    "message": "आपका वर्तमान देश",
-    "description": "आपके वर्तमान देश का संदेश"
-  },
-  "ispMessage": {
-    "message": "ISP",
-    "description": "ISP संदेश"
-  },
-  "privacyInfoBtnTitle": {
-    "message": "गोपनीयता जानकारी",
-    "description": "गोपनीयता बटन का शीर्षक"
-  },
-  "privacyInfoMessage": {
-    "message": "यह एक्सटेंशन उपयोगकर्ता का कोई व्यक्तिगत डेटा न तो एकत्र करता है और न ही संग्रहित करता है। आपकी IP और अनुमानित लोकेशन दिखाने के लिए यह तृतीय-पक्ष APIs का उपयोग करता है: ipify.org और country.is।",
-    "description": "गोपनीयता पैनल संदेश"
-  }
+	"extName": {
+		"message": "Easy IP Finder",
+		"description": "एक्सटेंशन का नाम"
+	},
+	"extShortName": {
+		"message": "EasyIPFinder",
+		"description": "एक्सटेंशन का छोटा नाम"
+	},
+	"extDescription": {
+		"message": "यह Chrome एक्सटेंशन ब्राउज़र टूलबार से आपकी सार्वजनिक IP जल्दी दिखाता है, उन उपयोगकर्ताओं के लिए आदर्श जो अक्सर अपनी IP जांचते हैं।",
+		"description": "एक्सटेंशन का विवरण"
+	},
+	"copyToClipboardAction": {
+		"message": "IP क्लिपबोर्ड पर कॉपी करें",
+		"description": "क्लिपबोर्ड पर कॉपी करने के लिए एक्शन लेबल"
+	},
+	"copyConfigText": {
+		"message": "पॉपअप खोलते समय IP क्लिपबोर्ड पर कॉपी करें",
+		"description": "स्वचालित कॉपी कॉन्फ़िगरेशन लेबल"
+	},
+	"ipCopiedText": {
+		"message": "IP क्लिपबोर्ड पर कॉपी हो गई",
+		"description": "नोटिफिकेशन के लिए टेक्स्ट"
+	},
+	"genericErrorMessage": {
+		"message": "एक त्रुटि हुई है, असुविधा के लिए खेद है। कृपया फिर से प्रयास करें। संदर्भ: ",
+		"description": "सामान्य त्रुटि टेक्स्ट"
+	},
+	"changeVersionToShowText": {
+		"message": "IPv{v} पर बदलें",
+		"description": "संस्करण बदलने वाले बटन का टेक्स्ट"
+	},
+	"rateUsMessage": {
+		"message": "क्या आपको एक्सटेंशन पसंद आया? 🌟 कृपया <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>रेट करें!</a> आपकी प्रतिक्रिया हमें बेहतर बनने में मदद करती है। धन्यवाद!",
+		"description": "रेट करने का संदेश"
+	},
+	"authorMessage": {
+		"message": "द्वारा संचालित <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "लेखक संदेश"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "आपका वर्तमान देश",
+		"description": "आपके वर्तमान देश का संदेश"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "ISP संदेश"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "गोपनीयता जानकारी",
+		"description": "गोपनीयता बटन का शीर्षक"
+	},
+	"privacyInfoMessage": {
+		"message": "यह एक्सटेंशन उपयोगकर्ता का कोई व्यक्तिगत डेटा न तो एकत्र करता है और न ही संग्रहित करता है। आपकी IP और अनुमानित लोकेशन दिखाने के लिए यह तृतीय-पक्ष APIs का उपयोग करता है: ipify.org और country.is।",
+		"description": "गोपनीयता पैनल संदेश"
+	}
 }

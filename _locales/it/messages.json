@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Ricerca IP Facile",
-        "description": "Nome dell'Estensione"
-    },
-    "extShortName": {
-        "message": "RicercaIPFacile",
-        "description": "Nome Breve dell'Estensione"
-    },
-    "extDescription": {
-        "message": "Questa estensione per Chrome fornisce un modo rapido e facile per visualizzare il proprio indirizzo IP pubblico direttamente dalla barra degli strumenti del browser. È ideale per gli utenti che devono controllare frequentemente il proprio indirizzo IP senza dover visitare siti web di terze parti.",
-        "description": "Descrizione dell'Estensione"
-    },
-    "copyToClipboardAction": {
-        "message": "Copia IP negli Appunti",
-        "description": "Etichetta Azione Copia negli Appunti"
-    },
-    "copyConfigText": {
-        "message": "Copia IP negli appunti all'apertura del popup",
-        "description": "Etichetta configurazione copia automatica"
-    },
-    "ipCopiedText": {
-        "message": "IP copiato negli appunti",
-        "description": "Testo Notifica"
-    },
-    "genericErrorMessage": {
-        "message": "Si è verificato un errore, ci scusiamo per l'inconveniente. Si prega di riprovare. Riferimento: ",
-        "description": "Testo Errore Generico"
-    },
-    "changeVersionToShowText": {
-        "message": "Passa a IPv{v}",
-        "description": "Testo del pulsante di cambio versione"
-    },
-    "rateUsMessage": {
-        "message": "Ti piace l'estensione? 🌟 Per favore, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>valutaci!</a> Il tuo feedback ci aiuta a migliorare. Grazie!",
-        "description": "Messaggio per valutarci"
-    },
-    "authorMessage": {
-        "message": "Sviluppato da <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-        "description": "Messaggio dell'autore"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "Il tuo paese attuale",
-        "description": "Messaggio del tuo paese attuale"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "Messaggio ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Informazioni sulla privacy",
-        "description": "Titolo del pulsante informazioni privacy"
-    },
-    "privacyInfoMessage": {
-        "message": "Questa estensione non raccoglie né memorizza dati personali dell'utente. Per mostrare il tuo indirizzo IP e la posizione approssimativa, interroga API di terze parti: ipify.org e country.is.",
-        "description": "Messaggio del pannello privacy"
-    }
+	"extName": {
+		"message": "Ricerca IP Facile",
+		"description": "Nome dell'Estensione"
+	},
+	"extShortName": {
+		"message": "RicercaIPFacile",
+		"description": "Nome Breve dell'Estensione"
+	},
+	"extDescription": {
+		"message": "Questa estensione per Chrome fornisce un modo rapido e facile per visualizzare il proprio indirizzo IP pubblico direttamente dalla barra degli strumenti del browser. È ideale per gli utenti che devono controllare frequentemente il proprio indirizzo IP senza dover visitare siti web di terze parti.",
+		"description": "Descrizione dell'Estensione"
+	},
+	"copyToClipboardAction": {
+		"message": "Copia IP negli Appunti",
+		"description": "Etichetta Azione Copia negli Appunti"
+	},
+	"copyConfigText": {
+		"message": "Copia IP negli appunti all'apertura del popup",
+		"description": "Etichetta configurazione copia automatica"
+	},
+	"ipCopiedText": {
+		"message": "IP copiato negli appunti",
+		"description": "Testo Notifica"
+	},
+	"genericErrorMessage": {
+		"message": "Si è verificato un errore, ci scusiamo per l'inconveniente. Si prega di riprovare. Riferimento: ",
+		"description": "Testo Errore Generico"
+	},
+	"changeVersionToShowText": {
+		"message": "Passa a IPv{v}",
+		"description": "Testo del pulsante di cambio versione"
+	},
+	"rateUsMessage": {
+		"message": "Ti piace l'estensione? 🌟 Per favore, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>valutaci!</a> Il tuo feedback ci aiuta a migliorare. Grazie!",
+		"description": "Messaggio per valutarci"
+	},
+	"authorMessage": {
+		"message": "Sviluppato da <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Messaggio dell'autore"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Il tuo paese attuale",
+		"description": "Messaggio del tuo paese attuale"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Messaggio ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Informazioni sulla privacy",
+		"description": "Titolo del pulsante informazioni privacy"
+	},
+	"privacyInfoMessage": {
+		"message": "Questa estensione non raccoglie né memorizza dati personali dell'utente. Per mostrare il tuo indirizzo IP e la posizione approssimativa, interroga API di terze parti: ipify.org e country.is.",
+		"description": "Messaggio del pannello privacy"
+	}
 }

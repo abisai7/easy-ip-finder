@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Легкий пошук IP",
-        "description": "Назва розширення"
-    },
-    "extShortName": {
-        "message": "ЛегкийIP",
-        "description": "Коротка назва розширення"
-    },
-    "extDescription": {
-        "message": "Це розширення для Chrome швидко показує вашу публічну IP-адресу на панелі інструментів браузера, ідеально підходить для користувачів, які часто перевіряють свою IP-адресу.",
-        "description": "Опис розширення"
-    },
-    "copyToClipboardAction": {
-        "message": "Скопіювати IP в буфер обміну",
-        "description": "Мітка дії копіювання в буфер обміну"
-    },
-    "copyConfigText": {
-        "message": "Копіювати IP в буфер обміну при відкритті спливаючого вікна",
-        "description": "Мітка конфігурації для автоматичного копіювання"
-    },
-    "ipCopiedText": {
-        "message": "IP скопійовано в буфер обміну",
-        "description": "Текст повідомлення"
-    },
-    "genericErrorMessage": {
-        "message": "Сталася помилка, вибачте за незручності. Будь ласка, спробуйте ще раз. Посилання: ",
-        "description": "Загальний текст помилки"
-    },
-    "changeVersionToShowText": {
-        "message": "Змінити на IPv{v}",
-        "description": "Текст кнопки для зміни версії"
-    },
-    "rateUsMessage": {
-        "message": "Насолоджуєтеся розширенням? 🌟 Будь ласка, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>оцініть нас!</a> Ваш відгук допомагає нам вдосконалитися. Дякуємо!",
-        "description": "Повідомлення для оцінки"
-    },
-    "authorMessage": {
-        "message": "Розроблено <a href=\"https://abisai.dev\" target=\"_blank\">Абі Геррерою</a> 🇬🇹",
-        "description": "Повідомлення від автора"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "Ваша поточна країна",
-        "description": "Повідомлення про вашу поточну країну"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "Повідомлення ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Інформація про конфіденційність",
-        "description": "Підказка кнопки конфіденційності"
-    },
-    "privacyInfoMessage": {
-        "message": "Це розширення не збирає і не зберігає персональні дані користувача. Щоб показати IP-адресу та приблизне місцезнаходження, воно звертається до сторонніх API: ipify.org і country.is.",
-        "description": "Повідомлення панелі конфіденційності"
-    }
+	"extName": {
+		"message": "Легкий пошук IP",
+		"description": "Назва розширення"
+	},
+	"extShortName": {
+		"message": "ЛегкийIP",
+		"description": "Коротка назва розширення"
+	},
+	"extDescription": {
+		"message": "Це розширення для Chrome швидко показує вашу публічну IP-адресу на панелі інструментів браузера, ідеально підходить для користувачів, які часто перевіряють свою IP-адресу.",
+		"description": "Опис розширення"
+	},
+	"copyToClipboardAction": {
+		"message": "Скопіювати IP в буфер обміну",
+		"description": "Мітка дії копіювання в буфер обміну"
+	},
+	"copyConfigText": {
+		"message": "Копіювати IP в буфер обміну при відкритті спливаючого вікна",
+		"description": "Мітка конфігурації для автоматичного копіювання"
+	},
+	"ipCopiedText": {
+		"message": "IP скопійовано в буфер обміну",
+		"description": "Текст повідомлення"
+	},
+	"genericErrorMessage": {
+		"message": "Сталася помилка, вибачте за незручності. Будь ласка, спробуйте ще раз. Посилання: ",
+		"description": "Загальний текст помилки"
+	},
+	"changeVersionToShowText": {
+		"message": "Змінити на IPv{v}",
+		"description": "Текст кнопки для зміни версії"
+	},
+	"rateUsMessage": {
+		"message": "Насолоджуєтеся розширенням? 🌟 Будь ласка, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>оцініть нас!</a> Ваш відгук допомагає нам вдосконалитися. Дякуємо!",
+		"description": "Повідомлення для оцінки"
+	},
+	"authorMessage": {
+		"message": "Розроблено <a href=\"https://abisai.dev\" target=\"_blank\">Абі Геррерою</a> 🇬🇹",
+		"description": "Повідомлення від автора"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Ваша поточна країна",
+		"description": "Повідомлення про вашу поточну країну"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Повідомлення ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Інформація про конфіденційність",
+		"description": "Підказка кнопки конфіденційності"
+	},
+	"privacyInfoMessage": {
+		"message": "Це розширення не збирає і не зберігає персональні дані користувача. Щоб показати IP-адресу та приблизне місцезнаходження, воно звертається до сторонніх API: ipify.org і country.is.",
+		"description": "Повідомлення панелі конфіденційності"
+	}
 }

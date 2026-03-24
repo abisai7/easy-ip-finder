@@ -1,24 +1,28 @@
 {
-  "name": "easy-ip-finder",
-  "private": true,
-  "version": "1.0.0.0",
-  "type": "module",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run --environment jsdom",
-    "test:watch": "vitest --environment jsdom"
-  },
-  "devDependencies": {
-    "@crxjs/vite-plugin": "2.4.0",
-    "jsdom": "^29.0.1",
-    "vite": "8.0.1",
-    "vitest": "^4.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/abisai7/easy-ip-finder"
-  }
+	"name": "easy-ip-finder",
+	"private": true,
+	"version": "1.0.0.0",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "vitest run --environment jsdom",
+		"test:watch": "vitest --environment jsdom",
+		"lint": "pnpx @biomejs/biome lint ./src ./_locales",
+    "lint:fix": "pnpx @biomejs/biome lint --write ./src ./_locales",
+		"format": "pnpx @biomejs/biome format --write ./src ./_locales ./manifest.json ./package.json ./README.md"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.8",
+		"@crxjs/vite-plugin": "2.4.0",
+		"jsdom": "^29.0.1",
+		"vite": "8.0.1",
+		"vitest": "^4.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/abisai7/easy-ip-finder"
+	}
 }

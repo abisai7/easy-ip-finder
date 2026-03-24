@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Kolay IP Bulucu",
-        "description": "Uzantı Adı"
-    },
-    "extShortName": {
-        "message": "KolayIPBulucu",
-        "description": "Kısa Uzantı Adı"
-    },
-    "extDescription": {
-        "message": "Bu Chrome uzantısı tarayıcı araç çubuğunda hızlıca genel IP'nizi gösterir, IP'lerini sık sık kontrol eden kullanıcılar için idealdir.",
-        "description": "Uzantı Açıklaması"
-    },
-    "copyToClipboardAction": {
-        "message": "IP'yi Panoya Kopyala",
-        "description": "Panoya kopyalama işlem etiketi"
-    },
-    "copyConfigText": {
-        "message": "Açılır pencereyi açarken IP'yi panoya kopyala",
-        "description": "Otomatik kopyalama için yapılandırma etiketi"
-    },
-    "ipCopiedText": {
-        "message": "IP panoya kopyalandı",
-        "description": "Bildirim metni"
-    },
-    "genericErrorMessage": {
-        "message": "Bir hata oluştu, rahatsızlık için özür dileriz. Lütfen tekrar deneyin. Referans: ",
-        "description": "Genel hata metni"
-    },
-    "changeVersionToShowText": {
-        "message": "IPv{v}'e Değiştir",
-        "description": "Versiyonu değiştirme düğme metni"
-    },
-    "rateUsMessage": {
-        "message": "Uzantıdan keyif alıyor musunuz? 🌟 Lütfen bize <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>puan verin!</a> Geri bildiriminiz bize gelişmemizde yardımcı olur. Teşekkür ederiz!",
-        "description": "Bize puan verme mesajı"
-    },
-    "authorMessage": {
-        "message": "Tarafından geliştirildi <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-        "description": "Yazar mesajı"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "Geçerli Ülkeniz",
-        "description": "Geçerli ülkeniz mesajı"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "ISP mesajı"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Gizlilik bilgisi",
-        "description": "Gizlilik bilgi butonu ipucu"
-    },
-    "privacyInfoMessage": {
-        "message": "Bu uzantı, kullanıcıya ait kişisel verileri toplamaz veya saklamaz. IP adresinizi ve yaklaşık konumunuzu göstermek için üçüncü taraf API'leri kullanır: ipify.org ve country.is.",
-        "description": "Gizlilik paneli mesajı"
-    }
+	"extName": {
+		"message": "Kolay IP Bulucu",
+		"description": "Uzantı Adı"
+	},
+	"extShortName": {
+		"message": "KolayIPBulucu",
+		"description": "Kısa Uzantı Adı"
+	},
+	"extDescription": {
+		"message": "Bu Chrome uzantısı tarayıcı araç çubuğunda hızlıca genel IP'nizi gösterir, IP'lerini sık sık kontrol eden kullanıcılar için idealdir.",
+		"description": "Uzantı Açıklaması"
+	},
+	"copyToClipboardAction": {
+		"message": "IP'yi Panoya Kopyala",
+		"description": "Panoya kopyalama işlem etiketi"
+	},
+	"copyConfigText": {
+		"message": "Açılır pencereyi açarken IP'yi panoya kopyala",
+		"description": "Otomatik kopyalama için yapılandırma etiketi"
+	},
+	"ipCopiedText": {
+		"message": "IP panoya kopyalandı",
+		"description": "Bildirim metni"
+	},
+	"genericErrorMessage": {
+		"message": "Bir hata oluştu, rahatsızlık için özür dileriz. Lütfen tekrar deneyin. Referans: ",
+		"description": "Genel hata metni"
+	},
+	"changeVersionToShowText": {
+		"message": "IPv{v}'e Değiştir",
+		"description": "Versiyonu değiştirme düğme metni"
+	},
+	"rateUsMessage": {
+		"message": "Uzantıdan keyif alıyor musunuz? 🌟 Lütfen bize <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>puan verin!</a> Geri bildiriminiz bize gelişmemizde yardımcı olur. Teşekkür ederiz!",
+		"description": "Bize puan verme mesajı"
+	},
+	"authorMessage": {
+		"message": "Tarafından geliştirildi <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Yazar mesajı"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Geçerli Ülkeniz",
+		"description": "Geçerli ülkeniz mesajı"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "ISP mesajı"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Gizlilik bilgisi",
+		"description": "Gizlilik bilgi butonu ipucu"
+	},
+	"privacyInfoMessage": {
+		"message": "Bu uzantı, kullanıcıya ait kişisel verileri toplamaz veya saklamaz. IP adresinizi ve yaklaşık konumunuzu göstermek için üçüncü taraf API'leri kullanır: ipify.org ve country.is.",
+		"description": "Gizlilik paneli mesajı"
+	}
 }

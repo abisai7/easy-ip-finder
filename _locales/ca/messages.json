@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Cercador d'IP Fàcil",
-        "description": "Nom de l'Extensió"
-    },
-    "extShortName": {
-        "message": "CercadorIPFàcil",
-        "description": "Nom Curt de l'Extensió"
-    },
-    "extDescription": {
-        "message": "Aquesta extensió per a Chrome proporciona una manera ràpida i fàcil de mostrar la teva adreça IP pública directament des de la barra d'eines del navegador. És ideal per als usuaris que necessiten comprovar sovint la seva adreça IP sense haver de visitar llocs web de tercers.",
-        "description": "Descripció de l'Extensió"
-    },
-    "copyToClipboardAction": {
-        "message": "Copiar IP al Porta-retalls",
-        "description": "Etiqueta de l'Acció de Copiar al Porta-retalls"
-    },
-    "copyConfigText": {
-        "message": "Copiar IP al porta-retalls en obrir la finestra emergent",
-        "description": "Etiqueta de configuració per copiar automàticament"
-    },
-    "ipCopiedText": {
-        "message": "IP copiada al porta-retalls",
-        "description": "Text de Notificació"
-    },
-    "genericErrorMessage": {
-        "message": "S'ha produït un error, lamentem les molèsties. Si us plau, torna-ho a intentar. Referència: ",
-        "description": "Text Genèric d'Error"
-    },
-    "changeVersionToShowText": {
-        "message": "Canviar a IPv{v}",
-        "description": "Text del botó de canvi de versió"
-    },
-    "rateUsMessage": {
-        "message": "Gaudint de l'extensió? 🌟 Si us plau, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>valora'ns!</a> Els teus comentaris ens ajuden a millorar. Gràcies!",
-        "description": "Missatge per valorar-nos"
-    },
-    "authorMessage": {
-        "message": "Desenvolupat per <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-        "description": "Missatge de l'autor"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "El teu país actual",
-        "description": "Missatge del teu país actual"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "Missatge ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Informació de privadesa",
-        "description": "Títol del botó d'informació de privadesa"
-    },
-    "privacyInfoMessage": {
-        "message": "Aquesta extensió no recull ni emmagatzema dades personals de l'usuari. Per mostrar la IP i la localització aproximada, consulta APIs de tercers: ipify.org i country.is.",
-        "description": "Missatge del tauler de privadesa"
-    }
+	"extName": {
+		"message": "Cercador d'IP Fàcil",
+		"description": "Nom de l'Extensió"
+	},
+	"extShortName": {
+		"message": "CercadorIPFàcil",
+		"description": "Nom Curt de l'Extensió"
+	},
+	"extDescription": {
+		"message": "Aquesta extensió per a Chrome proporciona una manera ràpida i fàcil de mostrar la teva adreça IP pública directament des de la barra d'eines del navegador. És ideal per als usuaris que necessiten comprovar sovint la seva adreça IP sense haver de visitar llocs web de tercers.",
+		"description": "Descripció de l'Extensió"
+	},
+	"copyToClipboardAction": {
+		"message": "Copiar IP al Porta-retalls",
+		"description": "Etiqueta de l'Acció de Copiar al Porta-retalls"
+	},
+	"copyConfigText": {
+		"message": "Copiar IP al porta-retalls en obrir la finestra emergent",
+		"description": "Etiqueta de configuració per copiar automàticament"
+	},
+	"ipCopiedText": {
+		"message": "IP copiada al porta-retalls",
+		"description": "Text de Notificació"
+	},
+	"genericErrorMessage": {
+		"message": "S'ha produït un error, lamentem les molèsties. Si us plau, torna-ho a intentar. Referència: ",
+		"description": "Text Genèric d'Error"
+	},
+	"changeVersionToShowText": {
+		"message": "Canviar a IPv{v}",
+		"description": "Text del botó de canvi de versió"
+	},
+	"rateUsMessage": {
+		"message": "Gaudint de l'extensió? 🌟 Si us plau, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>valora'ns!</a> Els teus comentaris ens ajuden a millorar. Gràcies!",
+		"description": "Missatge per valorar-nos"
+	},
+	"authorMessage": {
+		"message": "Desenvolupat per <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Missatge de l'autor"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "El teu país actual",
+		"description": "Missatge del teu país actual"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Missatge ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Informació de privadesa",
+		"description": "Títol del botó d'informació de privadesa"
+	},
+	"privacyInfoMessage": {
+		"message": "Aquesta extensió no recull ni emmagatzema dades personals de l'usuari. Per mostrar la IP i la localització aproximada, consulta APIs de tercers: ipify.org i country.is.",
+		"description": "Missatge del tauler de privadesa"
+	}
 }

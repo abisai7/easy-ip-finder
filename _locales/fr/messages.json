@@ -1,58 +1,58 @@
 {
-  "extName": {
-    "message": "Chercheur IP Facile",
-    "description": "Nom de l'Extension"
-  },
-  "extShortName": {
-    "message": "ChercheurIPFacile",
-    "description": "Nom Court de l'Extension"
-  },
-  "extDescription": {
-    "message": "Cette extension Chrome fournit un moyen rapide et facile d'afficher votre adresse IP publique directement depuis la barre d'outils du navigateur. Elle est idéale pour les utilisateurs qui ont fréquemment besoin de vérifier leur adresse IP sans avoir à visiter des sites web tiers.",
-    "description": "Description de l'Extension"
-  },
-  "copyToClipboardAction": {
-    "message": "Copier l'IP dans le Presse-papiers",
-    "description": "Étiquette de l'action de copie dans le presse-papiers"
-  },
-  "copyConfigText": {
-    "message": "Copier l'IP dans le presse-papiers lors de l'ouverture de la fenêtre contextuelle",
-    "description": "Étiquette de configuration pour copier automatiquement"
-  },
-  "ipCopiedText": {
-    "message": "IP copiée dans le presse-papiers",
-    "description": "Texte de notification"
-  },
-  "genericErrorMessage": {
-    "message": "Une erreur s'est produite, désolé pour le désagrément. Veuillez réessayer. Référence : ",
-    "description": "Texte générique d'erreur"
-  },
-  "changeVersionToShowText": {
-    "message": "Changer vers IPv{v}",
-    "description": "Texte du bouton de commutation de version"
-  },
-  "rateUsMessage": {
-    "message": "Vous appréciez l'extension ? 🌟 Veuillez <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>nous noter !</a> Vos retours nous aident à nous améliorer. Merci !",
-    "description": "Message pour nous évaluer"
-  },
-  "authorMessage": {
-    "message": "Propulsé par <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-    "description": "Message de l'auteur"
-  },
-  "yourCurrentCountryMessage": {
-    "message": "Votre pays actuel",
-    "description": "Message de votre pays actuel"
-  },
-  "ispMessage": {
-    "message": "ISP",
-    "description": "Message ISP"
-  },
-  "privacyInfoBtnTitle": {
-    "message": "Informations sur la confidentialité",
-    "description": "Info-bulle du bouton de confidentialité"
-  },
-  "privacyInfoMessage": {
-    "message": "Cette extension ne collecte ni ne stocke de données personnelles utilisateur. Pour afficher votre adresse IP et votre localisation approximative, elle interroge des API tierces : ipify.org et country.is.",
-    "description": "Message du panneau de confidentialité"
-  }
+	"extName": {
+		"message": "Chercheur IP Facile",
+		"description": "Nom de l'Extension"
+	},
+	"extShortName": {
+		"message": "ChercheurIPFacile",
+		"description": "Nom Court de l'Extension"
+	},
+	"extDescription": {
+		"message": "Cette extension Chrome fournit un moyen rapide et facile d'afficher votre adresse IP publique directement depuis la barre d'outils du navigateur. Elle est idéale pour les utilisateurs qui ont fréquemment besoin de vérifier leur adresse IP sans avoir à visiter des sites web tiers.",
+		"description": "Description de l'Extension"
+	},
+	"copyToClipboardAction": {
+		"message": "Copier l'IP dans le Presse-papiers",
+		"description": "Étiquette de l'action de copie dans le presse-papiers"
+	},
+	"copyConfigText": {
+		"message": "Copier l'IP dans le presse-papiers lors de l'ouverture de la fenêtre contextuelle",
+		"description": "Étiquette de configuration pour copier automatiquement"
+	},
+	"ipCopiedText": {
+		"message": "IP copiée dans le presse-papiers",
+		"description": "Texte de notification"
+	},
+	"genericErrorMessage": {
+		"message": "Une erreur s'est produite, désolé pour le désagrément. Veuillez réessayer. Référence : ",
+		"description": "Texte générique d'erreur"
+	},
+	"changeVersionToShowText": {
+		"message": "Changer vers IPv{v}",
+		"description": "Texte du bouton de commutation de version"
+	},
+	"rateUsMessage": {
+		"message": "Vous appréciez l'extension ? 🌟 Veuillez <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>nous noter !</a> Vos retours nous aident à nous améliorer. Merci !",
+		"description": "Message pour nous évaluer"
+	},
+	"authorMessage": {
+		"message": "Propulsé par <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Message de l'auteur"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Votre pays actuel",
+		"description": "Message de votre pays actuel"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Message ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Informations sur la confidentialité",
+		"description": "Info-bulle du bouton de confidentialité"
+	},
+	"privacyInfoMessage": {
+		"message": "Cette extension ne collecte ni ne stocke de données personnelles utilisateur. Pour afficher votre adresse IP et votre localisation approximative, elle interroge des API tierces : ipify.org et country.is.",
+		"description": "Message du panneau de confidentialité"
+	}
 }

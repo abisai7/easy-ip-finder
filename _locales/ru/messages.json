@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Простой поиск IP",
-        "description": "Название расширения"
-    },
-    "extShortName": {
-        "message": "ПростойIPПоиск",
-        "description": "Краткое название расширения"
-    },
-    "extDescription": {
-        "message": "Это расширение для Chrome предоставляет быстрый и простой способ отображения вашего публичного IP-адреса непосредственно из панели инструментов браузера. Оно идеально подходит для пользователей, которым часто приходится проверять свой IP-адрес, не посещая сторонние веб-сайты.",
-        "description": "Описание расширения"
-    },
-    "copyToClipboardAction": {
-        "message": "Копировать IP в буфер обмена",
-        "description": "Метка действия копирования в буфер обмена"
-    },
-    "copyConfigText": {
-        "message": "Автоматическое копирование IP в буфер обмена при открытии всплывающего окна",
-        "description": "Метка настройки автоматического копирования"
-    },
-    "ipCopiedText": {
-        "message": "IP скопирован в буфер обмена",
-        "description": "Текст уведомления"
-    },
-    "genericErrorMessage": {
-        "message": "Произошла ошибка, извините за неудобства. Пожалуйста, попробуйте снова. Ссылка: ",
-        "description": "Общий текст ошибки"
-    },
-    "changeVersionToShowText": {
-        "message": "Переключить на IPv{v}",
-        "description": "Текст кнопки переключения версии"
-    },
-    "rateUsMessage": {
-        "message": "Нравится расширение? 🌟 Пожалуйста, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>оцените нас!</a> Ваш отзыв помогает нам становиться лучше. Спасибо!",
-        "description": "Сообщение для оценки"
-    },
-    "authorMessage": {
-        "message": "Разработано <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-        "description": "Сообщение от автора"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "Ваш текущий страна",
-        "description": "Сообщение о вашем текущем стране"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "Сообщение ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Информация о конфиденциальности",
-        "description": "Подсказка кнопки конфиденциальности"
-    },
-    "privacyInfoMessage": {
-        "message": "Это расширение не собирает и не хранит персональные данные пользователя. Чтобы показать IP-адрес и примерное местоположение, оно обращается к сторонним API: ipify.org и country.is.",
-        "description": "Сообщение панели конфиденциальности"
-    }
+	"extName": {
+		"message": "Простой поиск IP",
+		"description": "Название расширения"
+	},
+	"extShortName": {
+		"message": "ПростойIPПоиск",
+		"description": "Краткое название расширения"
+	},
+	"extDescription": {
+		"message": "Это расширение для Chrome предоставляет быстрый и простой способ отображения вашего публичного IP-адреса непосредственно из панели инструментов браузера. Оно идеально подходит для пользователей, которым часто приходится проверять свой IP-адрес, не посещая сторонние веб-сайты.",
+		"description": "Описание расширения"
+	},
+	"copyToClipboardAction": {
+		"message": "Копировать IP в буфер обмена",
+		"description": "Метка действия копирования в буфер обмена"
+	},
+	"copyConfigText": {
+		"message": "Автоматическое копирование IP в буфер обмена при открытии всплывающего окна",
+		"description": "Метка настройки автоматического копирования"
+	},
+	"ipCopiedText": {
+		"message": "IP скопирован в буфер обмена",
+		"description": "Текст уведомления"
+	},
+	"genericErrorMessage": {
+		"message": "Произошла ошибка, извините за неудобства. Пожалуйста, попробуйте снова. Ссылка: ",
+		"description": "Общий текст ошибки"
+	},
+	"changeVersionToShowText": {
+		"message": "Переключить на IPv{v}",
+		"description": "Текст кнопки переключения версии"
+	},
+	"rateUsMessage": {
+		"message": "Нравится расширение? 🌟 Пожалуйста, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>оцените нас!</a> Ваш отзыв помогает нам становиться лучше. Спасибо!",
+		"description": "Сообщение для оценки"
+	},
+	"authorMessage": {
+		"message": "Разработано <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Сообщение от автора"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Ваш текущий страна",
+		"description": "Сообщение о вашем текущем стране"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Сообщение ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Информация о конфиденциальности",
+		"description": "Подсказка кнопки конфиденциальности"
+	},
+	"privacyInfoMessage": {
+		"message": "Это расширение не собирает и не хранит персональные данные пользователя. Чтобы показать IP-адрес и примерное местоположение, оно обращается к сторонним API: ipify.org и country.is.",
+		"description": "Сообщение панели конфиденциальности"
+	}
 }

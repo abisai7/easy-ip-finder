@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "Localizador de IP Fácil",
-        "description": "Nome da Extensão"
-    },
-    "extShortName": {
-        "message": "LocalizadorIPFácil",
-        "description": "Nome Curto da Extensão"
-    },
-    "extDescription": {
-        "message": "Esta extensão do Chrome mostra rapidamente o seu IP público na barra de ferramentas do navegador, ideal para utilizadores que verificam frequentemente o seu IP.",
-        "description": "Descrição da Extensão"
-    },
-    "copyToClipboardAction": {
-        "message": "Copiar IP para a Área de Transferência",
-        "description": "Etiqueta de ação para copiar para a área de transferência"
-    },
-    "copyConfigText": {
-        "message": "Copiar IP para a área de transferência ao abrir a janela pop-up",
-        "description": "Etiqueta de configuração para copiar automaticamente"
-    },
-    "ipCopiedText": {
-        "message": "IP copiado para a área de transferência",
-        "description": "Texto de notificação"
-    },
-    "genericErrorMessage": {
-        "message": "Ocorreu um erro, pedimos desculpa pelo inconveniente. Por favor, tente novamente. Referência: ",
-        "description": "Texto de erro genérico"
-    },
-    "changeVersionToShowText": {
-        "message": "Mudar para IPv{v}",
-        "description": "Botão de texto para mudar a versão"
-    },
-    "rateUsMessage": {
-        "message": "A gostar da extensão? 🌟 Por favor, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>avalie-nos!</a> O seu feedback ajuda-nos a melhorar. Obrigado!",
-        "description": "Mensagem para nos avaliar"
-    },
-    "authorMessage": {
-        "message": "Desenvolvido por <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-        "description": "Mensagem do autor"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "O seu país atual",
-        "description": "Mensagem do seu país atual"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "Mensagem ISP"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "Informações de privacidade",
-        "description": "Dica do botão de informações de privacidade"
-    },
-    "privacyInfoMessage": {
-        "message": "Esta extensão não recolhe nem armazena dados pessoais do utilizador. Para apresentar o seu endereço IP e a localização aproximada, consulta APIs de terceiros: ipify.org e country.is.",
-        "description": "Mensagem do painel de privacidade"
-    }
+	"extName": {
+		"message": "Localizador de IP Fácil",
+		"description": "Nome da Extensão"
+	},
+	"extShortName": {
+		"message": "LocalizadorIPFácil",
+		"description": "Nome Curto da Extensão"
+	},
+	"extDescription": {
+		"message": "Esta extensão do Chrome mostra rapidamente o seu IP público na barra de ferramentas do navegador, ideal para utilizadores que verificam frequentemente o seu IP.",
+		"description": "Descrição da Extensão"
+	},
+	"copyToClipboardAction": {
+		"message": "Copiar IP para a Área de Transferência",
+		"description": "Etiqueta de ação para copiar para a área de transferência"
+	},
+	"copyConfigText": {
+		"message": "Copiar IP para a área de transferência ao abrir a janela pop-up",
+		"description": "Etiqueta de configuração para copiar automaticamente"
+	},
+	"ipCopiedText": {
+		"message": "IP copiado para a área de transferência",
+		"description": "Texto de notificação"
+	},
+	"genericErrorMessage": {
+		"message": "Ocorreu um erro, pedimos desculpa pelo inconveniente. Por favor, tente novamente. Referência: ",
+		"description": "Texto de erro genérico"
+	},
+	"changeVersionToShowText": {
+		"message": "Mudar para IPv{v}",
+		"description": "Botão de texto para mudar a versão"
+	},
+	"rateUsMessage": {
+		"message": "A gostar da extensão? 🌟 Por favor, <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>avalie-nos!</a> O seu feedback ajuda-nos a melhorar. Obrigado!",
+		"description": "Mensagem para nos avaliar"
+	},
+	"authorMessage": {
+		"message": "Desenvolvido por <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Mensagem do autor"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "O seu país atual",
+		"description": "Mensagem do seu país atual"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "Mensagem ISP"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Informações de privacidade",
+		"description": "Dica do botão de informações de privacidade"
+	},
+	"privacyInfoMessage": {
+		"message": "Esta extensão não recolhe nem armazena dados pessoais do utilizador. Para apresentar o seu endereço IP e a localização aproximada, consulta APIs de terceiros: ipify.org e country.is.",
+		"description": "Mensagem do painel de privacidade"
+	}
 }

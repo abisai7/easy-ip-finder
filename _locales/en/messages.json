@@ -1,58 +1,58 @@
 {
-  "extName": {
-    "message": "Easy IP Finder",
-    "description": "Extension Name"
-  },
-  "extShortName": {
-    "message": "EasyIPFinder",
-    "description": "Extension Short Name"
-  },
-  "extDescription": {
-    "message": "This Chrome extension quickly shows your public IP in the browser toolbar, ideal for users often checking their IP.",
-    "description": "Extension Description"
-  },
-  "copyToClipboardAction": {
-    "message": "Copy IP to Clipboard",
-    "description": "Copy to clipboard action label"
-  },
-  "copyConfigText": {
-    "message": "Copy IP to clipboard when opening the popup",
-    "description": "Copy automatically config label"
-  },
-  "ipCopiedText": {
-    "message": "IP copied to clipboard",
-    "description": "Notification text"
-  },
-  "genericErrorMessage": {
-    "message": "An error has occurred, sorry for the inconvenience. Please try again. Reference: ",
-    "description": "Generic error text"
-  },
-  "changeVersionToShowText": {
-      "message": "Change to IPv{v}",
-      "description": "Change version text button"
-  },
-  "rateUsMessage": {
-    "message": "Enjoying the extension? 🌟 Please <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>rate us!</a> Your feedback helps us improve. Thank you!",
-    "description": "Rate us message"
-  },
-  "authorMessage": {
-    "message": "Powered by <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
-    "description": "Author message"
-  },
-  "yourCurrentCountryMessage": {
-    "message": "Your current country",
-    "description": "Your current country message"
-  },
-  "ispMessage": {
-    "message": "ISP",
-    "description": "ISP message"
-  },
-  "privacyInfoBtnTitle": {
-    "message": "Privacy information",
-    "description": "Privacy info button tooltip"
-  },
-  "privacyInfoMessage": {
-    "message": "This extension does not collect or store personal user data. To display your IP address and approximate location, it queries third-party APIs: ipify.org and country.is.",
-    "description": "Privacy info panel message"
-  }
+	"extName": {
+		"message": "Easy IP Finder",
+		"description": "Extension Name"
+	},
+	"extShortName": {
+		"message": "EasyIPFinder",
+		"description": "Extension Short Name"
+	},
+	"extDescription": {
+		"message": "This Chrome extension quickly shows your public IP in the browser toolbar, ideal for users often checking their IP.",
+		"description": "Extension Description"
+	},
+	"copyToClipboardAction": {
+		"message": "Copy IP to Clipboard",
+		"description": "Copy to clipboard action label"
+	},
+	"copyConfigText": {
+		"message": "Copy IP to clipboard when opening the popup",
+		"description": "Copy automatically config label"
+	},
+	"ipCopiedText": {
+		"message": "IP copied to clipboard",
+		"description": "Notification text"
+	},
+	"genericErrorMessage": {
+		"message": "An error has occurred, sorry for the inconvenience. Please try again. Reference: ",
+		"description": "Generic error text"
+	},
+	"changeVersionToShowText": {
+		"message": "Change to IPv{v}",
+		"description": "Change version text button"
+	},
+	"rateUsMessage": {
+		"message": "Enjoying the extension? 🌟 Please <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>rate us!</a> Your feedback helps us improve. Thank you!",
+		"description": "Rate us message"
+	},
+	"authorMessage": {
+		"message": "Powered by <a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹",
+		"description": "Author message"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "Your current country",
+		"description": "Your current country message"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "ISP message"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "Privacy information",
+		"description": "Privacy info button tooltip"
+	},
+	"privacyInfoMessage": {
+		"message": "This extension does not collect or store personal user data. To display your IP address and approximate location, it queries third-party APIs: ipify.org and country.is.",
+		"description": "Privacy info panel message"
+	}
 }

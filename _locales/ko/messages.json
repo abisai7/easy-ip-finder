@@ -1,58 +1,58 @@
 {
-    "extName": {
-        "message": "간편한 IP 찾기",
-        "description": "확장 프로그램 이름"
-    },
-    "extShortName": {
-        "message": "간편IP찾기",
-        "description": "확장 프로그램 짧은 이름"
-    },
-    "extDescription": {
-        "message": "이 Chrome 확장 프로그램은 브라우저의 도구 모음에서 공용 IP 주소를 직접 빠르고 쉽게 표시하는 방법을 제공합니다. 제3자 웹 사이트를 방문하지 않고 IP 주소를 자주 확인해야 하는 사용자에게 이상적입니다.",
-        "description": "확장 프로그램 설명"
-    },
-    "copyToClipboardAction": {
-        "message": "IP를 클립보드에 복사",
-        "description": "클립보드로 복사하는 작업 레이블"
-    },
-    "copyConfigText": {
-        "message": "팝업을 열 때 IP를 자동으로 클립보드에 복사",
-        "description": "자동 복사 구성 레이블"
-    },
-    "ipCopiedText": {
-        "message": "IP가 클립보드에 복사되었습니다",
-        "description": "알림 텍스트"
-    },
-    "genericErrorMessage": {
-        "message": "오류가 발생했습니다. 불편을 끼쳐 죄송합니다. 다시 시도해주세요. 참조:",
-        "description": "일반 오류 텍스트"
-    },
-    "changeVersionToShowText": {
-        "message": "IPv{v}로 변경",
-        "description": "버전 전환 버튼 텍스트"
-    },
-    "rateUsMessage": {
-        "message": "확장 프로그램을 즐기고 계신가요? 🌟 <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>평가해 주세요!</a> 여러분의 피드백은 개선에 큰 도움이 됩니다. 감사합니다!",
-        "description": "평가 요청 메시지"
-    },
-    "authorMessage": {
-        "message": "<a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹가 제공하는 서비스입니다",
-        "description": "작성자 메시지"
-    },
-    "yourCurrentCountryMessage": {
-        "message": "현재 국가",
-        "description": "현재 국가 메시지"
-    },
-    "ispMessage": {
-        "message": "ISP",
-        "description": "ISP 메시지"
-    },
-    "privacyInfoBtnTitle": {
-        "message": "개인정보 안내",
-        "description": "개인정보 버튼 툴팁"
-    },
-    "privacyInfoMessage": {
-        "message": "이 확장 프로그램은 사용자의 개인정보를 수집하거나 저장하지 않습니다. IP 주소와 대략적인 위치 정보를 표시하기 위해 서드파티 API인 ipify.org와 country.is를 사용합니다.",
-        "description": "개인정보 패널 메시지"
-    }
+	"extName": {
+		"message": "간편한 IP 찾기",
+		"description": "확장 프로그램 이름"
+	},
+	"extShortName": {
+		"message": "간편IP찾기",
+		"description": "확장 프로그램 짧은 이름"
+	},
+	"extDescription": {
+		"message": "이 Chrome 확장 프로그램은 브라우저의 도구 모음에서 공용 IP 주소를 직접 빠르고 쉽게 표시하는 방법을 제공합니다. 제3자 웹 사이트를 방문하지 않고 IP 주소를 자주 확인해야 하는 사용자에게 이상적입니다.",
+		"description": "확장 프로그램 설명"
+	},
+	"copyToClipboardAction": {
+		"message": "IP를 클립보드에 복사",
+		"description": "클립보드로 복사하는 작업 레이블"
+	},
+	"copyConfigText": {
+		"message": "팝업을 열 때 IP를 자동으로 클립보드에 복사",
+		"description": "자동 복사 구성 레이블"
+	},
+	"ipCopiedText": {
+		"message": "IP가 클립보드에 복사되었습니다",
+		"description": "알림 텍스트"
+	},
+	"genericErrorMessage": {
+		"message": "오류가 발생했습니다. 불편을 끼쳐 죄송합니다. 다시 시도해주세요. 참조:",
+		"description": "일반 오류 텍스트"
+	},
+	"changeVersionToShowText": {
+		"message": "IPv{v}로 변경",
+		"description": "버전 전환 버튼 텍스트"
+	},
+	"rateUsMessage": {
+		"message": "확장 프로그램을 즐기고 계신가요? 🌟 <a href='https://chromewebstore.google.com/detail/easy-ip-finder/bdlcjennmekonnngblfoiomdficeobej' target='_blank'>평가해 주세요!</a> 여러분의 피드백은 개선에 큰 도움이 됩니다. 감사합니다!",
+		"description": "평가 요청 메시지"
+	},
+	"authorMessage": {
+		"message": "<a href=\"https://abisai.dev\" target=\"_blank\">Abi Herrera</a> 🇬🇹가 제공하는 서비스입니다",
+		"description": "작성자 메시지"
+	},
+	"yourCurrentCountryMessage": {
+		"message": "현재 국가",
+		"description": "현재 국가 메시지"
+	},
+	"ispMessage": {
+		"message": "ISP",
+		"description": "ISP 메시지"
+	},
+	"privacyInfoBtnTitle": {
+		"message": "개인정보 안내",
+		"description": "개인정보 버튼 툴팁"
+	},
+	"privacyInfoMessage": {
+		"message": "이 확장 프로그램은 사용자의 개인정보를 수집하거나 저장하지 않습니다. IP 주소와 대략적인 위치 정보를 표시하기 위해 서드파티 API인 ipify.org와 country.is를 사용합니다.",
+		"description": "개인정보 패널 메시지"
+	}
 }

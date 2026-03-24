@@ -1,7 +1,7 @@
 const primaryLogo = `
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
   <path fill="none" d="M12 2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm-2 3H8v6h1V9.014h1c.298-.013 2 0 2-2.018 0-1.74-1.314-1.952-1.825-1.987zM6 5H5v6h1zm4 .984c.667 0 1 .336 1 1.008C11 7.664 10.667 8 10 8H9V5.984z"/>
-</svg>`
+</svg>`;
 
 const copyLogo = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
@@ -10,16 +10,16 @@ const copyLogo = `
   <path fill="currentColor" d="M29 16h2V6.68A1.66 1.66 0 0029.35 5h-2.27v2H29z"/>
   <path fill="currentColor" d="M29 31H7V7h2V5H6.64A1.66 1.66 0 005 6.67v24.65A1.66 1.66 0 006.65 33h22.71A1.66 1.66 0 0031 31.33v-9.27h-2z"/>
   <path fill="none" d="M0 0h36v36H0z"/>
-</svg>`
+</svg>`;
 
 export const renderPopupTemplate = ({
-  title,
-  copyToClipboardAction,
-  copyConfigText,
-  rateUsMessage,
-  authorMessage,
-  privacyInfoBtnTitle,
-  privacyInfoMessage,
+	title,
+	copyToClipboardAction,
+	copyConfigText,
+	rateUsMessage,
+	authorMessage,
+	privacyInfoBtnTitle,
+	privacyInfoMessage,
 }) => /* html */ `
 <section class="top-section">
   <div class="logo">   
@@ -71,4 +71,4 @@ export const renderPopupTemplate = ({
 <div class="privacy-info-panel hide" role="status" aria-live="polite">
   <p>${privacyInfoMessage}</p>
 </div>
-`
+`;
