@@ -46,5 +46,13 @@
   "ispMessage": {
     "message": "ISP",
     "description": "ISP संदेश"
+  },
+  "privacyInfoBtnTitle": {
+    "message": "गोपनीयता जानकारी",
+    "description": "गोपनीयता बटन का शीर्षक"
+  },
+  "privacyInfoMessage": {
+    "message": "यह एक्सटेंशन उपयोगकर्ता का कोई व्यक्तिगत डेटा न तो एकत्र करता है और न ही संग्रहित करता है। आपकी IP और अनुमानित लोकेशन दिखाने के लिए यह तृतीय-पक्ष APIs का उपयोग करता है: ipify.org और country.is।",
+    "description": "गोपनीयता पैनल संदेश"
   }
 }

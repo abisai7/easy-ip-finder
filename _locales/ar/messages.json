@@ -46,5 +46,13 @@
   "ispMessage": {
     "message": "مزود خدمة الإنترنت",
     "description": "رسالة مزود الخدمة"
+  },
+  "privacyInfoBtnTitle": {
+    "message": "معلومات الخصوصية",
+    "description": "عنوان زر معلومات الخصوصية"
+  },
+  "privacyInfoMessage": {
+    "message": "هذه الإضافة لا تجمع ولا تخزن أي بيانات شخصية للمستخدم. لعرض عنوان IP والموقع التقريبي، فهي تستعلم واجهات برمجية من جهات خارجية: ipify.org و country.is.",
+    "description": "رسالة لوحة الخصوصية"
   }
 }

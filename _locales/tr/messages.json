@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "ISP mesajı"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "Gizlilik bilgisi",
+        "description": "Gizlilik bilgi butonu ipucu"
+    },
+    "privacyInfoMessage": {
+        "message": "Bu uzantı, kullanıcıya ait kişisel verileri toplamaz veya saklamaz. IP adresinizi ve yaklaşık konumunuzu göstermek için üçüncü taraf API'leri kullanır: ipify.org ve country.is.",
+        "description": "Gizlilik paneli mesajı"
     }
 }

@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "הודעת ISP"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "מידע על פרטיות",
+        "description": "כותרת לחצן מידע צניעות"
+    },
+    "privacyInfoMessage": {
+        "message": "תוסף זה אינו אוסף או שומר נתונים אישיים של המשתמש. כדי להציג את כתובת ה-IP והמיקום המשוער, הוא פונה ל-API של צד שלישי: ipify.org ו-country.is.",
+        "description": "הודעת לוח הצנעות"
     }
 }

@@ -7,4 +7,6 @@ export const getPopupElements = () => ({
   error: document.querySelector('.error'),
   ip: document.querySelector('x-ip'),
   moreIpInfo: document.querySelector('.more-ip-info'),
+  privacyInfoButton: document.querySelector('.privacy-info-btn'),
+  privacyInfoPanel: document.querySelector('.privacy-info-panel'),
 })

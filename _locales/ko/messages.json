@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "ISP 메시지"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "개인정보 안내",
+        "description": "개인정보 버튼 툴팁"
+    },
+    "privacyInfoMessage": {
+        "message": "이 확장 프로그램은 사용자의 개인정보를 수집하거나 저장하지 않습니다. IP 주소와 대략적인 위치 정보를 표시하기 위해 서드파티 API인 ipify.org와 country.is를 사용합니다.",
+        "description": "개인정보 패널 메시지"
     }
 }

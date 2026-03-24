@@ -9,4 +9,6 @@ export const getPopupMessages = () => ({
   rateUsMessage: chrome.i18n.getMessage('rateUsMessage'),
   authorMessage: chrome.i18n.getMessage('authorMessage'),
   ipCopiedText: chrome.i18n.getMessage('ipCopiedText'),
+  privacyInfoBtnTitle: chrome.i18n.getMessage('privacyInfoBtnTitle'),
+  privacyInfoMessage: chrome.i18n.getMessage('privacyInfoMessage'),
 })

@@ -46,5 +46,13 @@
   "ispMessage": {
     "message": "ISP",
     "description": "Nachricht ISP"
+  },
+  "privacyInfoBtnTitle": {
+    "message": "Datenschutzinformationen",
+    "description": "Tooltip des Datenschutz-Info-Buttons"
+  },
+  "privacyInfoMessage": {
+    "message": "Diese Erweiterung erfasst oder speichert keine personenbezogenen Nutzerdaten. Um Ihre IP-Adresse und Ihren ungefähren Standort anzuzeigen, nutzt sie Drittanbieter-APIs: ipify.org und country.is.",
+    "description": "Datenschutzhinweis-Panel Nachricht"
   }
 }

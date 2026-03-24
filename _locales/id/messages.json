@@ -46,5 +46,13 @@
   "ispMessage": {
     "message": "ISP",
     "description": "Pesan ISP"
+  },
+  "privacyInfoBtnTitle": {
+    "message": "Informasi privasi",
+    "description": "Judul tombol informasi privasi"
+  },
+  "privacyInfoMessage": {
+    "message": "Ekstensi ini tidak mengumpulkan atau menyimpan data pribadi pengguna. Untuk menampilkan alamat IP dan perkiraan lokasi Anda, ekstensi ini menggunakan API pihak ketiga: ipify.org dan country.is.",
+    "description": "Pesan panel privasi"
   }
 }

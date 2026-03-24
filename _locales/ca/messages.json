@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "Missatge ISP"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "Informació de privadesa",
+        "description": "Títol del botó d'informació de privadesa"
+    },
+    "privacyInfoMessage": {
+        "message": "Aquesta extensió no recull ni emmagatzema dades personals de l'usuari. Per mostrar la IP i la localització aproximada, consulta APIs de tercers: ipify.org i country.is.",
+        "description": "Missatge del tauler de privadesa"
     }
 }

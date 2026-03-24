@@ -46,5 +46,13 @@
   "ispMessage": {
     "message": "运营商",
     "description": "ISP 信息"
+  },
+  "privacyInfoBtnTitle": {
+    "message": "隐私信息",
+    "description": "隐私信息按鈕提示"
+  },
+  "privacyInfoMessage": {
+    "message": "此扩展不会收集或存储用户的个人数据。为了显示您的 IP 地址和大致位置，它会调用第三方 API：ipify.org 和 country.is。",
+    "description": "隐私面板消息"
   }
 }

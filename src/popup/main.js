@@ -16,6 +16,8 @@ document.querySelector('#app').innerHTML = renderPopupTemplate({
   copyConfigText: messages.copyConfigText,
   rateUsMessage: messages.rateUsMessage,
   authorMessage: messages.authorMessage,
+  privacyInfoBtnTitle: messages.privacyInfoBtnTitle,
+  privacyInfoMessage: messages.privacyInfoMessage,
 })
 
 const elements = getPopupElements()
@@ -63,6 +65,29 @@ const controller = createPopupController({
 })
 
 controller.bindEvents()
+
+elements.privacyInfoButton.addEventListener('click', () => {
+  elements.privacyInfoPanel.classList.toggle('hide')
+  elements.privacyInfoPanel.classList.toggle('show')
+})
+
+document.addEventListener('click', (event) => {
+  const isPanelOpen = elements.privacyInfoPanel.classList.contains('show')
+
+  if (!isPanelOpen) {
+    return
+  }
+
+  const clickedOnButton = elements.privacyInfoButton.contains(event.target)
+  const clickedInsidePanel = elements.privacyInfoPanel.contains(event.target)
+
+  if (clickedOnButton || clickedInsidePanel) {
+    return
+  }
+
+  elements.privacyInfoPanel.classList.remove('show')
+  elements.privacyInfoPanel.classList.add('hide')
+})
 
 document.addEventListener('DOMContentLoaded', async () => {
   await controller.init()

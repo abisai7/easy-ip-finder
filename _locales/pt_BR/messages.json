@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "Mensagem ISP"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "Informações de privacidade",
+        "description": "Dica do botão de informações de privacidade"
+    },
+    "privacyInfoMessage": {
+        "message": "Esta extensão não coleta nem armazena dados pessoais do usuário. Para exibir seu endereço IP e localização aproximada, ela consulta APIs de terceiros: ipify.org e country.is.",
+        "description": "Mensagem do painel de privacidade"
     }
 }

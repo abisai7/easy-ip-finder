@@ -46,5 +46,13 @@
     "ispMessage": {
         "message": "ISP",
         "description": "ISPメッセージ"
+    },
+    "privacyInfoBtnTitle": {
+        "message": "プライバシー情報",
+        "description": "プライバシーボタンのツールチップ"
+    },
+    "privacyInfoMessage": {
+        "message": "この拡張機能は、ユーザーの個人データを収集または保存しません。IPアドレスとおおよその位置情報を表示するために、サードパーティAPIの ipify.org と country.is を利用します。",
+        "description": "プライバシーパネルのメッセージ"
     }
 }
