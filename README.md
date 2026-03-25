@@ -4,7 +4,7 @@
 
 # EASY IP FINDER
 
-This Chrome extension provides a quick and easy way to display your public IP address directly from the browser's toolbar. It's ideal for users who frequently need to check their IP address without having to visit third-party websites.
+This browser extension provides a quick and easy way to display your public IP address directly from the browser's toolbar. It's ideal for users who frequently need to check their IP address without having to visit third-party websites.
 
 ## Features
 
@@ -61,7 +61,42 @@ Once you're ready to build the extension for use:
 pnpm run build
 ```
 
-Run in developer mode or generating the build will generate a dist folder containing the local (dev) or production (build) version of the extension.
+Build targets are also available per browser:
+
+```bash
+pnpm run build:chrome
+pnpm run build:firefox
+```
+
+To create a Chrome installable package (`.zip`):
+
+```bash
+pnpm run release:chrome
+```
+
+Or package only (if `dist/chrome` already exists):
+
+```bash
+pnpm run package:chrome
+```
+
+To create a Firefox installable package (`.xpi`):
+
+```bash
+pnpm run release:firefox
+```
+
+Or package only (if `dist/firefox` already exists):
+
+```bash
+pnpm run package:firefox
+```
+
+Run in developer mode or generating the build will generate a dist folder containing browser-specific builds:
+
+- `dist/chrome`
+- `dist/firefox`
+- `dist/releases` (generated Chrome `.zip` and Firefox `.xpi` packages)
 
 ## Adding the Extension to Chrome
 
@@ -69,8 +104,16 @@ To install and test your extension in Chrome, follow these steps:
 
 1. Open Chrome and navigate to chrome://extensions/.
 2. Enable Developer Mode in the top right corner.
-3. Click "Load unpacked" and select your project's dist folder.
+3. Click "Load unpacked" and select your project's `dist/chrome` folder.
 4. The extension should now appear in your extensions bar. If not, you can find it in the extensions menu and pin it for quick access.
+
+## Adding the Extension to Firefox
+
+To install and test your extension in Firefox, follow these steps:
+
+1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
+2. Click "Load Temporary Add-on...".
+3. Select the `manifest.json` file inside `dist/firefox`.
 
 ## Usage
 

@@ -8,6 +8,10 @@
 	--primary-color: var(--mustard);
 }
 
+html {
+	font-size: 12px;
+}
+
 #app {
 	max-width: fit-content;
 }
@@ -19,6 +23,7 @@ body {
 	color: var(--primary-color);
 	font-family: system-ui, sans-serif;
 	text-align: start;
+	font-size: 12px;
 }
 
 .show {

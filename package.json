@@ -6,17 +6,26 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "pnpm run build:chrome && pnpm run build:firefox",
+		"build:chrome": "cross-env TARGET_BROWSER=chrome vite build",
+		"build:firefox": "cross-env TARGET_BROWSER=firefox vite build",
+		"package:chrome": "node ./scripts/package-chrome.mjs",
+		"release:chrome": "pnpm run build:chrome && pnpm run package:chrome",
+		"package:firefox": "node ./scripts/package-firefox.mjs",
+		"release:firefox": "pnpm run build:firefox && pnpm run package:firefox",
+		"release": "pnpm run release:chrome && pnpm run release:firefox",
 		"preview": "vite preview",
 		"test": "vitest run --environment jsdom",
 		"test:watch": "vitest --environment jsdom",
 		"lint": "pnpx @biomejs/biome lint ./src ./_locales",
-    "lint:fix": "pnpx @biomejs/biome lint --write ./src ./_locales",
+		"lint:fix": "pnpx @biomejs/biome lint --write ./src ./_locales",
 		"format": "pnpx @biomejs/biome format --write ./src ./_locales ./manifest.json ./package.json ./README.md"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.8",
 		"@crxjs/vite-plugin": "2.4.0",
+		"archiver": "^7.0.1",
+		"cross-env": "^10.1.0",
 		"jsdom": "^29.0.1",
 		"vite": "8.0.1",
 		"vitest": "^4.1.0"

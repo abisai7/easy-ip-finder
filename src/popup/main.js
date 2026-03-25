@@ -51,8 +51,79 @@ const showNotification = () => {
 		iconUrl: "/icon128.png",
 		silent: true,
 	};
-	chrome.notifications.create(options);
+
+	if (!chrome?.notifications?.create) {
+		showToastNotification(messages.ipCopiedText);
+		return;
+	}
+
+	try {
+		chrome.notifications.create(options, (notificationId) => {
+			if (chrome.runtime?.lastError || !notificationId) {
+				showToastNotification(messages.ipCopiedText);
+			}
+		});
+	} catch {
+		showToastNotification(messages.ipCopiedText);
+	}
 };
+
+// Toast notification fallback for Firefox
+const showToastNotification = (message) => {
+	const toast = document.createElement("div");
+	toast.textContent = message;
+	toast.style.cssText = `
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #fed766;
+		color: #272727;
+		padding: 12px 20px;
+		border-radius: 4px;
+		font-size: 14px;
+		font-weight: bold;
+		z-index: 1000;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		animation: slideUp 0.3s ease-out;
+	`;
+
+	document.body.appendChild(toast);
+
+	setTimeout(() => {
+		toast.style.animation = "slideDown 0.3s ease-out";
+		setTimeout(() => toast.remove(), 300);
+	}, 2000);
+};
+
+// Add animations
+if (!document.getElementById("toast-styles")) {
+	const style = document.createElement("style");
+	style.id = "toast-styles";
+	style.textContent = `
+		@keyframes slideUp {
+			from {
+				opacity: 0;
+				transform: translateX(-50%) translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(-50%) translateY(0);
+			}
+		}
+		@keyframes slideDown {
+			from {
+				opacity: 1;
+				transform: translateX(-50%) translateY(0);
+			}
+			to {
+				opacity: 0;
+				transform: translateX(-50%) translateY(20px);
+			}
+		}
+	`;
+	document.head.appendChild(style);
+}
 
 const controller = createPopupController({
 	elements,
