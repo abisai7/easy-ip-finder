@@ -1,11 +1,19 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import { crx } from '@crxjs/vite-plugin'
 import manifest from './manifest.json'
 import fs from 'fs/promises'
 import path from 'path'
 
-function getManifestForTarget(targetBrowser) {
-  const browserManifest = structuredClone(manifest)
+interface LocaleMessages {
+  rateUsMessage?: {
+    message: string
+  }
+  [key: string]: unknown
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getManifestForTarget(targetBrowser: string): any {
+  const browserManifest = structuredClone(manifest) as Record<string, any>
 
   if (targetBrowser === 'firefox') {
     const serviceWorkerEntry = browserManifest.background?.service_worker
@@ -32,11 +40,11 @@ function getManifestForTarget(targetBrowser) {
 }
 
 // Plugin to update locale files for Firefox target
-function localesTransformPlugin() {
+function localesTransformPlugin(): Plugin {
   return {
     name: 'locales-transform',
-    async writeBundle() {
-      const targetBrowser = process.env.TARGET_BROWSER || 'chrome'
+    async writeBundle(): Promise<void> {
+      const targetBrowser: string = process.env.TARGET_BROWSER || 'chrome'
       
       if (targetBrowser !== 'firefox') {
         return
@@ -47,9 +55,9 @@ function localesTransformPlugin() {
       const locales = await fs.readdir(localesDir)
 
       for (const locale of locales) {
-        const messagesPath = path.join(localesDir, locale, 'messages.json')
-        const content = await fs.readFile(messagesPath, 'utf-8')
-        const messages = JSON.parse(content)
+        const messagesPath: string = path.join(localesDir, locale, 'messages.json')
+        const content: string = await fs.readFile(messagesPath, 'utf-8')
+        const messages: LocaleMessages = JSON.parse(content)
 
         if (messages.rateUsMessage) {
           // Replace Chrome Web Store link with Firefox-friendly text
@@ -66,7 +74,7 @@ function localesTransformPlugin() {
 }
 
 export default defineConfig(() => {
-  const targetBrowser = process.env.TARGET_BROWSER || 'chrome'
+  const targetBrowser: string = process.env.TARGET_BROWSER || 'chrome'
 
   return {
     plugins: [crx({ manifest: getManifestForTarget(targetBrowser) }), localesTransformPlugin()],

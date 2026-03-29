@@ -1,53 +1,88 @@
-export const createPopupUI = (elements, messages, regionNames) => {
-	const toggleVisibility = (element, show) => {
+import type { IPLocationData } from "../services/ip/location";
+
+export interface PopupUIElements {
+	clipboardConfigCheck: HTMLInputElement;
+	changeVersionButton: HTMLButtonElement;
+	changeVersionButtonText: HTMLElement;
+	copyToClipboardButton: HTMLElement;
+	loader: HTMLElement;
+	error: HTMLElement;
+	ip: HTMLElement;
+	moreIpInfo: HTMLElement;
+}
+
+export interface PopupUIMessages {
+	changeVersionToShowText: string;
+	yourCurrentCountryMessage: string;
+	ispMessage: string;
+}
+
+export interface PopupUI {
+	clearError: () => void;
+	clearLocationData: () => void;
+	resetBeforeRender: () => void;
+	showCopyToClipboardAction: () => void;
+	hideCopyToClipboardAction: () => void;
+	setLoading: (show?: boolean) => void;
+	renderError: (errorMessage: string) => void;
+	showIp: (ip: string) => void;
+	hideIp: () => void;
+	renderIPLocationData: (ipLocationData: IPLocationData | null) => void;
+	updateVersionToggleText: (version: number) => void;
+	setVersionButtonDisabled: (disabled: boolean) => void;
+	setCopyOnLoadChecked: (checked: boolean) => void;
+}
+
+export const createPopupUI = (elements: PopupUIElements, messages: PopupUIMessages, regionNames: Intl.DisplayNames): PopupUI => {
+	const toggleVisibility = (element: HTMLElement, show: boolean): void => {
 		element.classList.toggle("show", show);
 		element.classList.toggle("hide", !show);
 	};
 
-	const clearError = () => {
+	const clearError = (): void => {
 		elements.error.textContent = "";
 		elements.error.classList.add("hide");
 	};
 
-	const clearLocationData = () => {
+	const clearLocationData = (): void => {
 		elements.moreIpInfo.innerHTML = "";
 		elements.moreIpInfo.classList.add("hide");
 	};
 
-	const resetBeforeRender = () => {
+	const resetBeforeRender = (): void => {
 		clearError();
 		clearLocationData();
 		hideIp();
 		hideCopyToClipboardAction();
 	};
 
-	const showCopyToClipboardAction = () => {
+	const showCopyToClipboardAction = (): void => {
 		toggleVisibility(elements.copyToClipboardButton, true);
 	};
 
-	const hideCopyToClipboardAction = () => {
+	const hideCopyToClipboardAction = (): void => {
 		toggleVisibility(elements.copyToClipboardButton, false);
 	};
 
-	const setLoading = (show = true) => {
+	const setLoading = (show: boolean = true): void => {
 		toggleVisibility(elements.loader, show);
 	};
 
-	const renderError = (errorMessage) => {
+	const renderError = (errorMessage: string): void => {
 		elements.error.textContent = `${errorMessage}`;
 		elements.error.classList.remove("hide");
 	};
 
-	const showIp = (ip) => {
+	const showIp = (ip: string): void => {
 		elements.ip.innerText = ip;
 		toggleVisibility(elements.ip, true);
 	};
 
-	const hideIp = () => {
+	const hideIp = (): void => {
 		toggleVisibility(elements.ip, false);
 	};
 
-	const renderIPLocationData = (ipLocationData) => {
+	const renderIPLocationData = (ipLocationData: IPLocationData | null): void => {
 		if (!ipLocationData) {
 			return;
 		}
@@ -87,16 +122,16 @@ export const createPopupUI = (elements, messages, regionNames) => {
 		}
 	};
 
-	const updateVersionToggleText = (version) => {
+	const updateVersionToggleText = (version: number): void => {
 		elements.changeVersionButtonText.innerText =
-			messages.changeVersionToShowText.replace("{v}", version === 4 ? 6 : 4);
+			messages.changeVersionToShowText.replace("{v}", String(version === 4 ? 6 : 4));
 	};
 
-	const setVersionButtonDisabled = (disabled) => {
+	const setVersionButtonDisabled = (disabled: boolean): void => {
 		elements.changeVersionButton.disabled = disabled;
 	};
 
-	const setCopyOnLoadChecked = (checked) => {
+	const setCopyOnLoadChecked = (checked: boolean): void => {
 		elements.clipboardConfigCheck.checked = checked;
 	};
 

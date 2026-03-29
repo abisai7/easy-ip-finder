@@ -1,4 +1,37 @@
-import { IP_VERSIONS } from "../shared/settings";
+import { IP_VERSIONS, type IPVersion } from "../shared/settings";
+import type { PopupUI } from "./ui";
+import type { PopupStorage } from "./storage";
+import type { IPLocationData } from "../services/ip/location";
+
+interface PopupControllerElements {
+	clipboardConfigCheck: HTMLInputElement;
+	changeVersionButton: HTMLButtonElement;
+	copyToClipboardButton: HTMLElement;
+}
+
+interface IPTrackerService {
+	init(version: number, copyToClipboard: boolean, onCopy: (() => void) | null): Promise<{ ip: string | null; error: string }>;
+	copyToClipboard(ip: string, onCopy: (() => void) | null): Promise<void>;
+}
+
+interface IPLocationService {
+	fetchLocationData(ip: string): Promise<IPLocationData | null>;
+}
+
+interface PopupControllerDeps {
+	elements: PopupControllerElements;
+	ui: PopupUI;
+	popupStorage: PopupStorage;
+	ipTracker: IPTrackerService;
+	ipLocation: IPLocationService;
+	genericErrorMessage: string;
+	onCopyNotification: () => void;
+}
+
+export interface PopupController {
+	bindEvents: () => void;
+	init: () => Promise<void>;
+}
 
 export const createPopupController = ({
 	elements,
@@ -8,13 +41,13 @@ export const createPopupController = ({
 	ipLocation,
 	genericErrorMessage,
 	onCopyNotification,
-}) => {
-	let currentIP = null;
-	let activeRenderId = 0;
-	let isRendering = false;
-	let isVersionSwitching = false;
+}: PopupControllerDeps): PopupController => {
+	let currentIP: string | null = null;
+	let activeRenderId: number = 0;
+	let isRendering: boolean = false;
+	let isVersionSwitching: boolean = false;
 
-	const renderIPLocationData = async (renderId, ip) => {
+	const renderIPLocationData = async (renderId: number, ip: string): Promise<void> => {
 		const ipLocationData = await ipLocation.fetchLocationData(ip);
 		if (renderId !== activeRenderId || !ipLocationData) {
 			return;
@@ -23,7 +56,7 @@ export const createPopupController = ({
 		ui.renderIPLocationData(ipLocationData);
 	};
 
-	const renderIP = async (version = 4) => {
+	const renderIP = async (version: IPVersion = 4): Promise<void> => {
 		const renderId = ++activeRenderId;
 		isRendering = true;
 		ui.setVersionButtonDisabled(true);
@@ -63,9 +96,9 @@ export const createPopupController = ({
 		}
 	};
 
-	const bindEvents = () => {
-		elements.clipboardConfigCheck.addEventListener("change", async (event) => {
-			await popupStorage.setCopyToClipboardOnLoad(event.target.checked);
+	const bindEvents = (): void => {
+		elements.clipboardConfigCheck.addEventListener("change", async (event: Event) => {
+			await popupStorage.setCopyToClipboardOnLoad((event.target as HTMLInputElement).checked);
 		});
 
 		elements.changeVersionButton.addEventListener("click", async () => {
@@ -86,11 +119,13 @@ export const createPopupController = ({
 		});
 
 		elements.copyToClipboardButton.addEventListener("click", () => {
-			ipTracker.copyToClipboard(currentIP, onCopyNotification);
+			if (currentIP) {
+				ipTracker.copyToClipboard(currentIP, onCopyNotification);
+			}
 		});
 	};
 
-	const init = async () => {
+	const init = async (): Promise<void> => {
 		const version = await popupStorage.getVersionConfig();
 		await renderIP(version);
 	};

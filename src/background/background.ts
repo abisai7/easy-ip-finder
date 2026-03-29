@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 		STORAGE_KEYS.versionConfig,
 	]);
 
-	const updates = {};
+	const updates: Record<string, boolean | number> = {};
 
 	if (config[STORAGE_KEYS.copyToClipboardOnLoad] === undefined) {
 		updates[STORAGE_KEYS.copyToClipboardOnLoad] =

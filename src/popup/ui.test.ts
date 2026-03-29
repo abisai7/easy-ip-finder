@@ -1,7 +1,7 @@
 import { describe, expect, it, beforeEach } from "vitest";
-import { createPopupUI } from "./ui";
+import { createPopupUI, type PopupUI, type PopupUIElements } from "./ui";
 
-const makeElements = () => {
+const makeElements = (): PopupUIElements => {
 	document.body.innerHTML = `
     <input id="check" type="checkbox" />
     <button id="change"></button>
@@ -14,20 +14,20 @@ const makeElements = () => {
   `;
 
 	return {
-		clipboardConfigCheck: document.querySelector("#check"),
-		changeVersionButton: document.querySelector("#change"),
-		changeVersionButtonText: document.querySelector("#change-text"),
-		copyToClipboardButton: document.querySelector("#copy"),
-		loader: document.querySelector("#loader"),
-		error: document.querySelector("#error"),
-		ip: document.querySelector("#ip"),
-		moreIpInfo: document.querySelector("#more-info"),
+		clipboardConfigCheck: document.querySelector("#check") as HTMLInputElement,
+		changeVersionButton: document.querySelector("#change") as HTMLButtonElement,
+		changeVersionButtonText: document.querySelector("#change-text") as HTMLSpanElement,
+		copyToClipboardButton: document.querySelector("#copy") as HTMLButtonElement,
+		loader: document.querySelector("#loader") as HTMLDivElement,
+		error: document.querySelector("#error") as HTMLDivElement,
+		ip: document.querySelector("#ip") as HTMLElement,
+		moreIpInfo: document.querySelector("#more-info") as HTMLDivElement,
 	};
 };
 
 describe("createPopupUI", () => {
-	let elements;
-	let ui;
+	let elements: PopupUIElements;
+	let ui: PopupUI;
 
 	beforeEach(() => {
 		elements = makeElements();
@@ -39,9 +39,10 @@ describe("createPopupUI", () => {
 				ispMessage: "ISP",
 			},
 			{
-				of: (countryCode) =>
+				of: (countryCode: string) =>
 					countryCode === "US" ? "United States" : countryCode,
-			},
+				resolvedOptions: () => ({ locale: "en", style: "long" as const, type: "region" as const, fallback: "code" as const }),
+			} as Intl.DisplayNames,
 		);
 	});
 

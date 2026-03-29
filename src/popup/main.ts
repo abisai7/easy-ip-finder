@@ -10,7 +10,7 @@ import { getPopupMessages } from "./messages";
 
 const messages = getPopupMessages();
 
-document.querySelector("#app").innerHTML = renderPopupTemplate({
+(document.querySelector("#app") as HTMLElement).innerHTML = renderPopupTemplate({
 	title: messages.title,
 	copyToClipboardAction: messages.copyToClipboardAction,
 	copyConfigText: messages.copyConfigText,
@@ -43,8 +43,8 @@ const ui = createPopupUI(
 	regionNames,
 );
 
-const showNotification = () => {
-	const options = {
+const showNotification = (): void => {
+	const options: chrome.notifications.NotificationCreateOptions = {
 		type: "basic",
 		title: messages.title,
 		message: messages.ipCopiedText,
@@ -69,7 +69,7 @@ const showNotification = () => {
 };
 
 // Toast notification fallback for Firefox
-const showToastNotification = (message) => {
+const showToastNotification = (message: string): void => {
 	const toast = document.createElement("div");
 	toast.textContent = message;
 	toast.style.cssText = `
@@ -142,15 +142,15 @@ elements.privacyInfoButton.addEventListener("click", () => {
 	elements.privacyInfoPanel.classList.toggle("show");
 });
 
-document.addEventListener("click", (event) => {
+document.addEventListener("click", (event: MouseEvent) => {
 	const isPanelOpen = elements.privacyInfoPanel.classList.contains("show");
 
 	if (!isPanelOpen) {
 		return;
 	}
 
-	const clickedOnButton = elements.privacyInfoButton.contains(event.target);
-	const clickedInsidePanel = elements.privacyInfoPanel.contains(event.target);
+	const clickedOnButton = elements.privacyInfoButton.contains(event.target as Node);
+	const clickedInsidePanel = elements.privacyInfoPanel.contains(event.target as Node);
 
 	if (clickedOnButton || clickedInsidePanel) {
 		return;

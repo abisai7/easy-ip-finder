@@ -1,20 +1,32 @@
 import { describe, expect, it, beforeEach, vi } from "vitest";
-import { createPopupController } from "./controller";
+import { createPopupController, type PopupController } from "./controller";
+import type { Mock } from "vitest";
 
-const flushPromises = async () => {
+const flushPromises = async (): Promise<void> => {
 	await Promise.resolve();
 	await Promise.resolve();
 };
 
-const deferred = () => {
-	let resolve;
-	const promise = new Promise((res) => {
+interface Deferred<T> {
+	promise: Promise<T>;
+	resolve: (value: T) => void;
+}
+
+const deferred = <T>(): Deferred<T> => {
+	let resolve!: (value: T) => void;
+	const promise = new Promise<T>((res) => {
 		resolve = res;
 	});
 	return { promise, resolve };
 };
 
-const createElements = () => {
+interface MockElements {
+	clipboardConfigCheck: HTMLInputElement;
+	changeVersionButton: HTMLButtonElement;
+	copyToClipboardButton: HTMLButtonElement;
+}
+
+const createElements = (): MockElements => {
 	const clipboardConfigCheck = document.createElement("input");
 	clipboardConfigCheck.type = "checkbox";
 	const changeVersionButton = document.createElement("button");
@@ -27,7 +39,23 @@ const createElements = () => {
 	};
 };
 
-const createUiMock = () => ({
+interface MockUI {
+	setVersionButtonDisabled: Mock;
+	setLoading: Mock;
+	resetBeforeRender: Mock;
+	setCopyOnLoadChecked: Mock;
+	renderError: Mock;
+	showIp: Mock;
+	updateVersionToggleText: Mock;
+	showCopyToClipboardAction: Mock;
+	renderIPLocationData: Mock;
+	clearError: Mock;
+	clearLocationData: Mock;
+	hideCopyToClipboardAction: Mock;
+	hideIp: Mock;
+}
+
+const createUiMock = (): MockUI => ({
 	setVersionButtonDisabled: vi.fn(),
 	setLoading: vi.fn(),
 	resetBeforeRender: vi.fn(),
@@ -37,16 +65,30 @@ const createUiMock = () => ({
 	updateVersionToggleText: vi.fn(),
 	showCopyToClipboardAction: vi.fn(),
 	renderIPLocationData: vi.fn(),
+	clearError: vi.fn(),
+	clearLocationData: vi.fn(),
+	hideCopyToClipboardAction: vi.fn(),
+	hideIp: vi.fn(),
 });
 
 describe("createPopupController", () => {
-	let elements;
-	let ui;
-	let popupStorage;
-	let ipTracker;
-	let ipLocation;
-	let controller;
-	let onCopyNotification;
+	let elements: MockElements;
+	let ui: MockUI;
+	let popupStorage: {
+		getCopyToClipboardOnLoad: Mock;
+		setCopyToClipboardOnLoad: Mock;
+		getVersionConfig: Mock;
+		setVersionConfig: Mock;
+	};
+	let ipTracker: {
+		init: Mock;
+		copyToClipboard: Mock;
+	};
+	let ipLocation: {
+		fetchLocationData: Mock;
+	};
+	let controller: PopupController;
+	let onCopyNotification: Mock;
 
 	beforeEach(() => {
 		elements = createElements();

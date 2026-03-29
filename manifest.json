@@ -20,9 +20,9 @@
 		"default_popup": "src/popup/index.html",
 		"default_title": "Click to view your public IP"
 	},
-	"permissions": ["storage", "notifications"],
+	"permissions": ["storage", "notifications", "clipboardWrite"],
 	"background": {
-		"service_worker": "src/background/background.js",
+		"service_worker": "src/background/background.ts",
 		"type": "module"
 	},
 	"author": {
