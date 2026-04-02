@@ -8,7 +8,7 @@
 		"description": "Nom Court de l'Extension"
 	},
 	"extDescription": {
-		"message": "Cette extension Chrome fournit un moyen rapide et facile d'afficher votre adresse IP publique directement depuis la barre d'outils du navigateur. Elle est idéale pour les utilisateurs qui ont fréquemment besoin de vérifier leur adresse IP sans avoir à visiter des sites web tiers.",
+		"message": "Affiche rapidement votre adresse IP publique directement depuis la barre d’outils du navigateur. Idéale si vous devez vérifier souvent votre IP sans ouvrir de sites web externes.",
 		"description": "Description de l'Extension"
 	},
 	"copyToClipboardAction": {

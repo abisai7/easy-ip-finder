@@ -8,7 +8,7 @@
 		"description": "Kurzname der Erweiterung"
 	},
 	"extDescription": {
-		"message": "Diese Chrome-Erweiterung bietet eine schnelle und einfache Möglichkeit, Ihre öffentliche IP-Adresse direkt aus der Symbolleiste des Browsers anzuzeigen. Sie ist ideal für Benutzer, die häufig ihre IP-Adresse überprüfen müssen, ohne Drittanbieter-Websites besuchen zu müssen.",
+		"message": "Zeigt Ihre öffentliche IP-Adresse schnell direkt in der Browser-Symbolleiste an. Ideal, wenn Sie Ihre IP häufig prüfen möchten, ohne externe Websites zu öffnen.",
 		"description": "Erweiterungsbeschreibung"
 	},
 	"copyToClipboardAction": {
