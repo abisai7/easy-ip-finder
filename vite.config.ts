@@ -29,6 +29,9 @@ function getManifestForTarget(targetBrowser: string): any {
       gecko: {
         id: 'easy-ip-finder@abisaidev',
         strict_min_version: '109.0',
+        data_collection_permissions: {
+          required: ['locationInfo'],
+        },
       },
     }
 
