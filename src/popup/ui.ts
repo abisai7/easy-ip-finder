@@ -33,7 +33,11 @@ export interface PopupUI {
 	setCopyOnLoadChecked: (checked: boolean) => void;
 }
 
-export const createPopupUI = (elements: PopupUIElements, messages: PopupUIMessages, regionNames: Intl.DisplayNames): PopupUI => {
+export const createPopupUI = (
+	elements: PopupUIElements,
+	messages: PopupUIMessages,
+	regionNames: Intl.DisplayNames,
+): PopupUI => {
 	const toggleVisibility = (element: HTMLElement, show: boolean): void => {
 		element.classList.toggle("show", show);
 		element.classList.toggle("hide", !show);
@@ -82,7 +86,9 @@ export const createPopupUI = (elements: PopupUIElements, messages: PopupUIMessag
 		toggleVisibility(elements.ip, false);
 	};
 
-	const renderIPLocationData = (ipLocationData: IPLocationData | null): void => {
+	const renderIPLocationData = (
+		ipLocationData: IPLocationData | null,
+	): void => {
 		if (!ipLocationData) {
 			return;
 		}
@@ -124,7 +130,10 @@ export const createPopupUI = (elements: PopupUIElements, messages: PopupUIMessag
 
 	const updateVersionToggleText = (version: number): void => {
 		elements.changeVersionButtonText.innerText =
-			messages.changeVersionToShowText.replace("{v}", String(version === 4 ? 6 : 4));
+			messages.changeVersionToShowText.replace(
+				"{v}",
+				String(version === 4 ? 6 : 4),
+			);
 	};
 
 	const setVersionButtonDisabled = (disabled: boolean): void => {

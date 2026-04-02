@@ -10,7 +10,11 @@ interface PopupControllerElements {
 }
 
 interface IPTrackerService {
-	init(version: number, copyToClipboard: boolean, onCopy: (() => void) | null): Promise<{ ip: string | null; error: string }>;
+	init(
+		version: number,
+		copyToClipboard: boolean,
+		onCopy: (() => void) | null,
+	): Promise<{ ip: string | null; error: string }>;
 	copyToClipboard(ip: string, onCopy: (() => void) | null): Promise<void>;
 }
 
@@ -47,7 +51,10 @@ export const createPopupController = ({
 	let isRendering: boolean = false;
 	let isVersionSwitching: boolean = false;
 
-	const renderIPLocationData = async (renderId: number, ip: string): Promise<void> => {
+	const renderIPLocationData = async (
+		renderId: number,
+		ip: string,
+	): Promise<void> => {
 		const ipLocationData = await ipLocation.fetchLocationData(ip);
 		if (renderId !== activeRenderId || !ipLocationData) {
 			return;
@@ -97,9 +104,14 @@ export const createPopupController = ({
 	};
 
 	const bindEvents = (): void => {
-		elements.clipboardConfigCheck.addEventListener("change", async (event: Event) => {
-			await popupStorage.setCopyToClipboardOnLoad((event.target as HTMLInputElement).checked);
-		});
+		elements.clipboardConfigCheck.addEventListener(
+			"change",
+			async (event: Event) => {
+				await popupStorage.setCopyToClipboardOnLoad(
+					(event.target as HTMLInputElement).checked,
+				);
+			},
+		);
 
 		elements.changeVersionButton.addEventListener("click", async () => {
 			if (isRendering || isVersionSwitching) {

@@ -1,4 +1,8 @@
-import { DEFAULT_SETTINGS, STORAGE_KEYS, type IPVersion } from "../shared/settings";
+import {
+	DEFAULT_SETTINGS,
+	STORAGE_KEYS,
+	type IPVersion,
+} from "../shared/settings";
 
 export interface PopupStorage {
 	getCopyToClipboardOnLoad(): Promise<boolean>;
@@ -26,7 +30,10 @@ export const popupStorage: PopupStorage = {
 
 	async getVersionConfig(): Promise<IPVersion> {
 		const config = await chrome.storage.sync.get([STORAGE_KEYS.versionConfig]);
-		return (config[STORAGE_KEYS.versionConfig] as IPVersion | undefined) ?? DEFAULT_SETTINGS.versionConfig;
+		return (
+			(config[STORAGE_KEYS.versionConfig] as IPVersion | undefined) ??
+			DEFAULT_SETTINGS.versionConfig
+		);
 	},
 
 	async setVersionConfig(version: IPVersion): Promise<void> {

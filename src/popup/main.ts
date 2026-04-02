@@ -10,15 +10,17 @@ import { getPopupMessages } from "./messages";
 
 const messages = getPopupMessages();
 
-(document.querySelector("#app") as HTMLElement).innerHTML = renderPopupTemplate({
-	title: messages.title,
-	copyToClipboardAction: messages.copyToClipboardAction,
-	copyConfigText: messages.copyConfigText,
-	rateUsMessage: messages.rateUsMessage,
-	authorMessage: messages.authorMessage,
-	privacyInfoBtnTitle: messages.privacyInfoBtnTitle,
-	privacyInfoMessage: messages.privacyInfoMessage,
-});
+(document.querySelector("#app") as HTMLElement).innerHTML = renderPopupTemplate(
+	{
+		title: messages.title,
+		copyToClipboardAction: messages.copyToClipboardAction,
+		copyConfigText: messages.copyConfigText,
+		rateUsMessage: messages.rateUsMessage,
+		authorMessage: messages.authorMessage,
+		privacyInfoBtnTitle: messages.privacyInfoBtnTitle,
+		privacyInfoMessage: messages.privacyInfoMessage,
+	},
+);
 
 const elements = getPopupElements();
 
@@ -149,8 +151,12 @@ document.addEventListener("click", (event: MouseEvent) => {
 		return;
 	}
 
-	const clickedOnButton = elements.privacyInfoButton.contains(event.target as Node);
-	const clickedInsidePanel = elements.privacyInfoPanel.contains(event.target as Node);
+	const clickedOnButton = elements.privacyInfoButton.contains(
+		event.target as Node,
+	);
+	const clickedInsidePanel = elements.privacyInfoPanel.contains(
+		event.target as Node,
+	);
 
 	if (clickedOnButton || clickedInsidePanel) {
 		return;

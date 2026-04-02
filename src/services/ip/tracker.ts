@@ -30,7 +30,10 @@ export const ipTracker = {
 		}
 	},
 
-	copyToClipboard: async (ip: string, onCopy: (() => void) | null = null): Promise<void> => {
+	copyToClipboard: async (
+		ip: string,
+		onCopy: (() => void) | null = null,
+	): Promise<void> => {
 		if (ip) {
 			try {
 				await navigator.clipboard.writeText(ip);
@@ -43,7 +46,11 @@ export const ipTracker = {
 		}
 	},
 
-	init: async (versionToGet: number = 4, copyToClipboard: boolean = false, onCopy: (() => void) | null = null): Promise<IPTrackerResult> => {
+	init: async (
+		versionToGet: number = 4,
+		copyToClipboard: boolean = false,
+		onCopy: (() => void) | null = null,
+	): Promise<IPTrackerResult> => {
 		try {
 			const url = ipTracker.getVersionUrl(versionToGet);
 			const currentIp = await ipTracker.fetchIP(url);

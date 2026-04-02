@@ -16,7 +16,9 @@ const makeElements = (): PopupUIElements => {
 	return {
 		clipboardConfigCheck: document.querySelector("#check") as HTMLInputElement,
 		changeVersionButton: document.querySelector("#change") as HTMLButtonElement,
-		changeVersionButtonText: document.querySelector("#change-text") as HTMLSpanElement,
+		changeVersionButtonText: document.querySelector(
+			"#change-text",
+		) as HTMLSpanElement,
 		copyToClipboardButton: document.querySelector("#copy") as HTMLButtonElement,
 		loader: document.querySelector("#loader") as HTMLDivElement,
 		error: document.querySelector("#error") as HTMLDivElement,
@@ -41,7 +43,12 @@ describe("createPopupUI", () => {
 			{
 				of: (countryCode: string) =>
 					countryCode === "US" ? "United States" : countryCode,
-				resolvedOptions: () => ({ locale: "en", style: "long" as const, type: "region" as const, fallback: "code" as const }),
+				resolvedOptions: () => ({
+					locale: "en",
+					style: "long" as const,
+					type: "region" as const,
+					fallback: "code" as const,
+				}),
 			} as Intl.DisplayNames,
 		);
 	});
